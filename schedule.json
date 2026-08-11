@@ -15,8 +15,14 @@
     "datetime": "2020-01-01T00:00:00Z",
     "caption": "Instagram requires an image \u2014 media_url is required for this platform.",
     "media_url": "https://muralsyourway.vtexassets.com/arquivos/ids/235910-825-auto?width=825&height=auto&aspect=true",
-    "status": "posted",
-    "posted_at": "2026-08-11T07:58:48.509778+00:00",
-    "result_id": "17857801845695598"
+    "status": "posted"
+  },
+  {
+    "id": "example-003",
+    "platform": "tiktok",
+    "datetime": "2020-01-01T00:00:00Z",
+    "caption": "Test TikTok draft upload",
+    "media_url": "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4",
+    "status": "pending"
   }
 ]
