@@ -2,6 +2,9 @@
 Posts a video to TikTok as a draft (lands in your TikTok inbox for you to
 review and manually publish) using the Content Posting API.
 
+Uses direct file upload rather than PULL_FROM_URL, since PULL_FROM_URL
+requires TikTok domain-ownership verification of the media host.
+
 This is intentionally NOT full silent auto-publish — that requires TikTok's
 app audit process. This draft-mode flow works today without an audit.
 
@@ -35,23 +38,45 @@ def _get_fresh_access_token() -> str:
 
 def post(caption: str, media_url: str = "") -> dict:
     if not media_url:
-        raise ValueError("TikTok posts require a media_url pointing to a public video file")
+        raise ValueError("TikTok posts require a media_url pointing to a video file")
 
     access_token = _get_fresh_access_token()
 
-    headers = {
+    # Download the video ourselves rather than asking TikTok to fetch it
+    video_response = requests.get(media_url, timeout=60)
+    if video_response.status_code >= 400:
+        raise RuntimeError(f"Could not download video from media_url ({video_response.status_code})")
+    video_bytes = video_response.content
+    video_size = len(video_bytes)
+
+    # Step 1: initialize the upload, telling TikTok we're sending the file directly
+    init_headers = {
         "Authorization": f"Bearer {access_token}",
         "Content-Type": "application/json; charset=UTF-8",
     }
-    payload = {
+    init_payload = {
         "source_info": {
-            "source": "PULL_FROM_URL",
-            "video_url": media_url,
+            "source": "FILE_UPLOAD",
+            "video_size": video_size,
+            "chunk_size": video_size,
+            "total_chunk_count": 1,
         }
     }
+    init_resp = requests.post(UPLOAD_INIT_URL, json=init_payload, headers=init_headers, timeout=30)
+    if init_resp.status_code >= 400:
+        raise RuntimeError(f"TikTok upload init failed ({init_resp.status_code}): {init_resp.text}")
 
-    response = requests.post(UPLOAD_INIT_URL, json=payload, headers=headers, timeout=30)
-    if response.status_code >= 400:
-        raise RuntimeError(f"TikTok draft upload failed ({response.status_code}): {response.text}")
+    init_data = init_resp.json()["data"]
+    upload_url = init_data["upload_url"]
+    publish_id = init_data["publish_id"]
 
-    return response.json()
+    # Step 2: send the actual video bytes to the upload URL TikTok gave us
+    upload_headers = {
+        "Content-Type": "video/mp4",
+        "Content-Range": f"bytes 0-{video_size - 1}/{video_size}",
+    }
+    upload_resp = requests.put(upload_url, data=video_bytes, headers=upload_headers, timeout=120)
+    if upload_resp.status_code >= 400:
+        raise RuntimeError(f"TikTok video upload failed ({upload_resp.status_code}): {upload_resp.text}")
+
+    return {"id": publish_id}
