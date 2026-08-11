@@ -23,7 +23,9 @@
     "datetime": "2020-01-01T00:00:00Z",
     "caption": "Test TikTok draft upload",
     "media_url": "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4",
-    "status": "pending",
-    "error": "TikTok draft upload failed (403): {\"error\":{\"code\":\"url_ownership_unverified\",\"message\":\"Please review our URL ownership verification rules at https://developers.tiktok.com/doc/content-posting-api-media-transfer-guide/#pull_from_url\",\"log_id\":\"2026081109481329C3FCB27476DD078B4D\"}}"
+    "status": "posted",
+    "error": "TikTok draft upload failed (403): {\"error\":{\"code\":\"url_ownership_unverified\",\"message\":\"Please review our URL ownership verification rules at https://developers.tiktok.com/doc/content-posting-api-media-transfer-guide/#pull_from_url\",\"log_id\":\"2026081109481329C3FCB27476DD078B4D\"}}",
+    "posted_at": "2026-08-11T09:56:57.399765+00:00",
+    "result_id": "v_inbox_file~v2.7672710767825307661"
   }
 ]
