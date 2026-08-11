@@ -11,7 +11,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-from platforms import facebook, instagram, pinterest
+from platforms import facebook, instagram, pinterest, tiktok
 
 SCHEDULE_PATH = Path(__file__).parent.parent / "schedule.json"
 
@@ -19,6 +19,7 @@ PLATFORM_HANDLERS = {
     "facebook": facebook.post,
     "instagram": instagram.post,
     "pinterest": pinterest.post,
+    "tiktok": tiktok.post,
 }
 
 
