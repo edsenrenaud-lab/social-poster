@@ -1,0 +1,18 @@
+[
+  {
+    "id": "example-001",
+    "platform": "facebook",
+    "datetime": "2026-08-10T15:00:00Z",
+    "caption": "This is an example post. Edit or delete this entry, then add your own below.",
+    "media_url": "",
+    "status": "pending"
+  },
+  {
+    "id": "example-002",
+    "platform": "instagram",
+    "datetime": "2026-08-10T15:00:00Z",
+    "caption": "Instagram requires an image — media_url is required for this platform.",
+    "media_url": "https://example.com/path-to-image.jpg",
+    "status": "pending"
+  }
+]
