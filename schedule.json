@@ -32,8 +32,10 @@
     "id": "cover-post-001",
     "platform": "facebook",
     "datetime": "2020-01-01T00:00:00Z",
-    "caption": "New book cover reveal! 📚",
+    "caption": "New book cover reveal! \ud83d\udcda",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/Cover.jpg",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-08-12T03:51:12.233435+00:00",
+    "result_id": "122109286118482826"
   }
 ]
