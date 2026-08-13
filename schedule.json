@@ -64,6 +64,8 @@
     "datetime": "2026-08-13T08:27:00Z",
     "caption": "TEST \u2014 ignore, deleting shortly",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/Untitled%20design-3.mp4",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-08-13T08:30:12.872855+00:00",
+    "result_id": "18474197617128812"
   }
 ]
