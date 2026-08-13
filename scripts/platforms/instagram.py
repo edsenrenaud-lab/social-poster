@@ -26,7 +26,7 @@ import os
 import time
 import requests
 
-from media_utils import detect_media_type
+from .media_utils import detect_media_type
 
 GRAPH_API_VERSION = "v21.0"
 GRAPH_API_BASE = f"https://graph.facebook.com/{GRAPH_API_VERSION}"

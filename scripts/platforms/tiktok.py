@@ -34,7 +34,7 @@ TOKEN_URL = "https://open.tiktokapis.com/v2/oauth/token/"
 VIDEO_UPLOAD_INIT_URL = "https://open.tiktokapis.com/v2/post/publish/inbox/video/init/"
 PHOTO_UPLOAD_INIT_URL = "https://open.tiktokapis.com/v2/post/publish/content/init/"
 
-from media_utils import detect_media_type
+from .media_utils import detect_media_type
 
 
 def _get_fresh_access_token() -> str:

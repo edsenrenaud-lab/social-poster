@@ -26,7 +26,7 @@ import os
 import time
 import requests
 
-from media_utils import detect_media_type
+from .media_utils import detect_media_type
 
 API_BASE = "https://api.pinterest.com/v5"
 
