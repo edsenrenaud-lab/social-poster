@@ -54,6 +54,16 @@
     "datetime": "2026-08-13T08:18:00Z",
     "caption": "TEST \u2014 ignore, deleting shortly",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/Untitled%20design-3.mp4",
+    "status": "posted",
+    "posted_at": "2026-08-13T08:22:12.524533+00:00",
+    "result_id": "1060419913054020"
+  },
+  {
+    "id": "test-instagram-video-day1",
+    "platform": "instagram",
+    "datetime": "2026-08-13T08:27:00Z",
+    "caption": "TEST \u2014 ignore, deleting shortly",
+    "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/Untitled%20design-3.mp4",
     "status": "pending"
   }
 ]
