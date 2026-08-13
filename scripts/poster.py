@@ -64,7 +64,11 @@ def main() -> None:
 
         try:
             print(f"[{entry['id']}] Posting to {platform}...")
-            result = handler(entry.get("caption", ""), entry.get("media_url", ""))
+            result = handler(
+                entry.get("caption", ""),
+                entry.get("media_url", ""),
+                entry.get("media_type", ""),
+            )
             entry["status"] = "posted"
             entry["posted_at"] = now.isoformat()
             entry["result_id"] = result.get("id", "")
