@@ -134,7 +134,8 @@
     "datetime": "2026-08-17T14:00:00Z",
     "caption": "\"Some projects stay at work. This one refused to.\" \u2014 Too Close to Walk Away is live now. #TCWA #contemporaryromance #chicagoromance\n\nIf you've already read TCWA, a quick review means the world \u2014 30 seconds, huge impact",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/Day%207.mp4",
-    "status": "pending"
+    "status": "failed",
+    "error": "Instagram failed to process the video (container 18116007148960938)"
   },
   {
     "id": "tcwa-day7-facebook-mirror",
