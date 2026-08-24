@@ -328,7 +328,9 @@
     "datetime": "2026-08-24T13:00:00Z",
     "caption": "\"The city was still waking up. She already had her second coffee.\" \u2014 Too Close to Walk Away is live now. #TCWA #contemporaryromance #chicagoromance\n\nIf you've already read TCWA, a quick review means the world \u2014 30 seconds, huge impact",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/Day%2017.mp4",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-08-24T14:26:26.429633+00:00",
+    "result_id": "v_inbox_file~v2.7677604269167691790"
   },
   {
     "id": "tcwa-day17-instagram",
@@ -336,7 +338,8 @@
     "datetime": "2026-08-24T14:00:00Z",
     "caption": "\"The city was still waking up. She already had her second coffee.\" \u2014 Too Close to Walk Away is live now. #TCWA #contemporaryromance #chicagoromance\n\nIf you've already read TCWA, a quick review means the world \u2014 30 seconds, huge impact",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/Day%2017.mp4",
-    "status": "pending"
+    "status": "failed",
+    "error": "Instagram publish failed (400): {\"error\":{\"message\":\"Fatal\",\"type\":\"OAuthException\",\"code\":-1,\"error_subcode\":2207085,\"is_transient\":false,\"error_user_title\":\"Generic Internal Error\",\"error_user_msg\":\"An internal server error occurred. Please try again later.\",\"fbtrace_id\":\"A6ZqKoZq0erwrbMJ6hhsvIv\"}}"
   },
   {
     "id": "tcwa-day17-facebook-mirror",
