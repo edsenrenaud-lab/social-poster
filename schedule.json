@@ -386,7 +386,8 @@
     "datetime": "2026-08-26T13:00:00Z",
     "caption": "\"The building wasn't finished. Neither were they.\" \u2014 Too Close to Walk Away is live now. #TCWA #contemporaryromance #chicagoromance\n\nIf you've already read TCWA, a quick review means the world \u2014 30 seconds, huge impact",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/Day%2020.mp4",
-    "status": "pending"
+    "status": "failed",
+    "error": "TikTok video upload failed (503): \n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\"\n \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html>\n  <head>\n    <title>503 first byte timeout</title>\n  </head>\n  <body>\n    <h1>Error 503 first byte timeout</h1>\n    <p>first byte timeout</p>\n    <h3>Error 54113</h3>\n    <p>Details: cache-iad-kcgs7200053-IAD 1787754498 2441243155</p>\n    <hr>\n    <p>Varnish cache server</p>\n  </body>\n</html>\n"
   },
   {
     "id": "tcwa-day20-instagram",
@@ -394,7 +395,9 @@
     "datetime": "2026-08-26T14:00:00Z",
     "caption": "\"The building wasn't finished. Neither were they.\" \u2014 Too Close to Walk Away is live now. #TCWA #contemporaryromance #chicagoromance\n\nIf you've already read TCWA, a quick review means the world \u2014 30 seconds, huge impact",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/Day%2020.mp4",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-08-26T14:27:37.763000+00:00",
+    "result_id": "17889180513610471"
   },
   {
     "id": "tcwa-day20-facebook-mirror",
