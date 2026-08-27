@@ -1,0 +1,34 @@
+name: Media Pre-flight Check
+
+on:
+  push:
+    paths:
+      - "schedule.json"
+  schedule:
+    - cron: "0 12 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Check all pending media links
+        run: python scripts/preflight_check.py
+
+      - name: Notify on broken link
+        if: failure()
+        run: |
+          curl -H "Title: TCWA Social Poster — broken media link found" \
+               -d "The pre-flight check found a broken media link in schedule.json. View: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+               "ntfy.sh/${{ secrets.NTFY_TOPIC }}"
