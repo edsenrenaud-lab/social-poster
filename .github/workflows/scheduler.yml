@@ -42,3 +42,10 @@ jobs:
           git add schedule.json
           git diff --cached --quiet || git commit -m "Update post statuses [skip ci]"
           git push
+
+      - name: Notify on failure
+        if: failure()
+        run: |
+          curl -H "Title: TCWA Social Poster — post failed" \
+               -d "One or more posts failed this run. Check schedule.json on GitHub for the error, or view: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+               "ntfy.sh/${{ secrets.NTFY_TOPIC }}"
