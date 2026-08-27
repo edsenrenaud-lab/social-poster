@@ -315,7 +315,9 @@
     "datetime": "2026-08-26T15:00:00Z",
     "caption": "\"The building wasn't finished. Neither were they.\" — Too Close to Walk Away is live now. #TCWA #contemporaryromance #chicagoromance\n\nIf you've already read TCWA, a quick review means the world — 30 seconds, huge impact",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/Day%2020.mp4",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-08-27T04:21:15.051776+00:00",
+    "result_id": "1716039976172859"
   },
   {
     "id": "tcwa-day7-tiktok",
@@ -323,7 +325,9 @@
     "datetime": "2026-08-27T03:26:00Z",
     "caption": "\"Some projects stay at work. This one refused to.\" — Too Close to Walk Away is live now. #TCWA #contemporaryromance #chicagoromance\n\nIf you've already read TCWA, a quick review means the world — 30 seconds, huge impact",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/Day%207.mp4",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-08-27T04:21:15.051776+00:00",
+    "result_id": "v_inbox_file~v2.7678561145841649695"
   },
   {
     "id": "tcwa-day7-facebook-mirror",
@@ -331,7 +335,9 @@
     "datetime": "2026-08-27T03:26:00Z",
     "caption": "\"Some projects stay at work. This one refused to.\" — Too Close to Walk Away is live now. #TCWA #contemporaryromance #chicagoromance\n\nIf you've already read TCWA, a quick review means the world — 30 seconds, huge impact",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/Day%207.mp4",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-08-27T04:21:15.051776+00:00",
+    "result_id": "1238918405047159"
   },
   {
     "id": "tcwa-day20-tiktok",
@@ -339,7 +345,9 @@
     "datetime": "2026-08-27T03:26:00Z",
     "caption": "\"The building wasn't finished. Neither were they.\" — Too Close to Walk Away is live now. #TCWA #contemporaryromance #chicagoromance\n\nIf you've already read TCWA, a quick review means the world — 30 seconds, huge impact",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/Day%2020.mp4",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-08-27T04:21:15.051776+00:00",
+    "result_id": "v_inbox_file~v2.7678561577490319374"
   },
   {
     "id": "tcwa-day22-tiktok",
@@ -555,6 +563,14 @@
     "datetime": "2026-09-04T15:00:00Z",
     "caption": "set in a city that actually feels lived in #chicagoromance #contemporaryromance\n\nThe story doesn't end here — Book Two, coming soon. Follow for the announcement.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/Day%2030.mp4",
+    "status": "pending"
+  },
+  {
+    "id": "test-notification-system-v2",
+    "platform": "not-a-real-platform",
+    "datetime": "2026-08-27T04:24:00Z",
+    "caption": "TEST — verifying failure notification pipeline, safe to ignore/delete",
+    "media_url": "",
     "status": "pending"
   }
 ]
