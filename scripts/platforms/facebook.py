@@ -7,6 +7,7 @@ detection.
 Required environment variables:
   FB_PAGE_ID            - the numeric ID of your Facebook Page
   FB_PAGE_ACCESS_TOKEN  - a long-lived Page access token with pages_manage_posts scope
+                           (reading insights also needs pages_read_engagement)
 
 Notes:
   - Images and text posts publish immediately.
@@ -86,3 +87,48 @@ def post(caption: str, media_url: str = "", media_type: str = "") -> dict:
             "Pass media_type='image' or media_type='video' explicitly, "
             "or use a URL with a recognized file extension."
         )
+
+
+def get_insights(post_id: str) -> dict:
+    """Fetches engagement metrics for a published Page post, photo, or video.
+
+    Works off the same object id captured as result_id at post time.
+    Likes/comments/shares come from the object's own edges, which is the
+    most reliable path across photos, videos, and feed posts — the
+    dedicated /insights edge uses different metric names per object type
+    and requires extra scopes, so this sticks to fields that are stable
+    across all three.
+    """
+    access_token = os.environ["FB_PAGE_ACCESS_TOKEN"]
+    url = f"{GRAPH_API_BASE}/{post_id}"
+
+    # 'shares' isn't a valid field on every post type (confirmed: it errors
+    # out photo/video posts, which is most of what this campaign posts) — so
+    # request likes/comments first, and only ask for shares separately,
+    # tolerating its absence rather than letting one bad field kill the
+    # whole call.
+    params = {
+        "fields": "likes.summary(true),comments.summary(true)",
+        "access_token": access_token,
+    }
+    response = requests.get(url, params=params, timeout=30)
+    if response.status_code >= 400:
+        raise RuntimeError(f"Facebook insights fetch failed ({response.status_code}): {response.text}")
+
+    data = response.json()
+    result = {
+        "likes": data.get("likes", {}).get("summary", {}).get("total_count", 0),
+        "comments": data.get("comments", {}).get("summary", {}).get("total_count", 0),
+        "shares": 0,
+    }
+
+    shares_response = requests.get(
+        url, params={"fields": "shares", "access_token": access_token}, timeout=30
+    )
+    if shares_response.status_code < 400:
+        result["shares"] = shares_response.json().get("shares", {}).get("count", 0)
+    # else: this post type doesn't support 'shares' — leave it at 0 rather
+    # than fail the whole metrics fetch over a field that was never going
+    # to be there.
+
+    return result

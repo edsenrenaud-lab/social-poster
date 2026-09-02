@@ -7,6 +7,7 @@ explicitly to skip detection.
 Required environment variables:
   IG_USER_ID     - the numeric Instagram Business account ID (not your @handle)
   IG_ACCESS_TOKEN - a long-lived access token with instagram_content_publish scope
+                     (reading insights also needs instagram_manage_insights)
 
 Note: Instagram requires media_url to be a PUBLICLY reachable URL.
 It cannot accept a local file — the image or video must already be
@@ -36,6 +37,11 @@ GRAPH_API_BASE = f"https://graph.facebook.com/{GRAPH_API_VERSION}"
 # typical launch-campaign clip lengths.
 VIDEO_PROCESSING_TIMEOUT_SECONDS = 300
 VIDEO_POLL_INTERVAL_SECONDS = 5
+
+# Reels report "plays" instead of "impressions", so the metric list
+# differs by media type — request the right set for each.
+IMAGE_METRICS = "impressions,reach,likes,comments,saved,shares"
+REELS_METRICS = "plays,reach,likes,comments,saved,shares"
 
 
 def _create_container(ig_user_id: str, access_token: str, caption: str, payload_extra: dict) -> str:
@@ -122,3 +128,42 @@ def post(caption: str, media_url: str = "", media_type: str = "") -> dict:
         )
 
     return _publish(ig_user_id, access_token, creation_id)
+
+
+def get_insights(media_id: str, media_type: str = "") -> dict:
+    """Fetches engagement metrics for a published IG post or Reel.
+
+    media_type ('image' or 'video') picks the right metric set — Reels
+    report 'plays' where feed images report 'impressions'. If omitted,
+    tries Reels metrics first and falls back to image metrics, since the
+    API rejects unsupported metrics for a given object rather than just
+    omitting them.
+    """
+    ig_user_id = os.environ["IG_USER_ID"]
+    access_token = os.environ["IG_ACCESS_TOKEN"]
+    url = f"{GRAPH_API_BASE}/{media_id}/insights"
+
+    metric_sets = []
+    if media_type == "video":
+        metric_sets = [REELS_METRICS]
+    elif media_type == "image":
+        metric_sets = [IMAGE_METRICS]
+    else:
+        metric_sets = [REELS_METRICS, IMAGE_METRICS]
+
+    last_error = None
+    for metrics in metric_sets:
+        response = requests.get(
+            url,
+            params={"metric": metrics, "access_token": access_token},
+            timeout=30,
+        )
+        if response.status_code < 400:
+            values = {
+                item["name"]: item.get("values", [{}])[0].get("value", 0)
+                for item in response.json().get("data", [])
+            }
+            return values
+        last_error = response.text
+
+    raise RuntimeError(f"Instagram insights fetch failed for {media_id}: {last_error}")

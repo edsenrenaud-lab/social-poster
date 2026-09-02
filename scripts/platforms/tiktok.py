@@ -25,6 +25,14 @@ Status:
     https://developers.tiktok.com/doc/content-posting-api-reference-upload-photo/
     if anything here doesn't match — TikTok's photo API is newer and less
     stable than their video API.
+
+Insights:
+  Because posts land as drafts, the publish_id returned at post time only
+  tracks upload status — it is NOT queryable for view/like counts. Once
+  you manually tap "publish" on a draft, get_insights() first resolves
+  publish_id -> the real video id via the status-fetch endpoint, then
+  queries that video's stats. Until you've approved the draft, get_insights
+  returns status="not_published" instead of numbers.
 """
 
 import os
@@ -33,6 +41,8 @@ import requests
 TOKEN_URL = "https://open.tiktokapis.com/v2/oauth/token/"
 VIDEO_UPLOAD_INIT_URL = "https://open.tiktokapis.com/v2/post/publish/inbox/video/init/"
 PHOTO_UPLOAD_INIT_URL = "https://open.tiktokapis.com/v2/post/publish/content/init/"
+STATUS_FETCH_URL = "https://open.tiktokapis.com/v2/post/publish/status/fetch/"
+VIDEO_QUERY_URL = "https://open.tiktokapis.com/v2/video/query/"
 
 from .media_utils import detect_media_type
 
@@ -138,3 +148,65 @@ def post(caption: str, media_url: str = "", media_type: str = "") -> dict:
             "Pass media_type='image' or media_type='video' explicitly, "
             "or use a URL with a recognized file extension."
         )
+
+
+def _resolve_video_id(access_token: str, publish_id: str) -> str | None:
+    """Returns the published video's real id, or None if the draft hasn't
+    been manually approved yet (or publishing failed)."""
+    headers = {
+        "Authorization": f"Bearer {access_token}",
+        "Content-Type": "application/json; charset=UTF-8",
+    }
+    response = requests.post(
+        STATUS_FETCH_URL, json={"publish_id": publish_id}, headers=headers, timeout=30
+    )
+    if response.status_code >= 400:
+        raise RuntimeError(f"TikTok status fetch failed ({response.status_code}): {response.text}")
+
+    data = response.json().get("data", {})
+    status = data.get("status")
+    # Field name is exactly this per TikTok's docs (their spelling, not ours).
+    post_ids = data.get("publicaly_available_post_id") or []
+
+    if status == "PUBLISH_COMPLETE" and post_ids:
+        return post_ids[0]
+    return None
+
+
+def get_insights(publish_id: str) -> dict:
+    """Fetches view/like/comment/share counts for a TikTok post.
+
+    Returns {"status": "not_published"} if the draft hasn't been manually
+    approved in the TikTok app yet — that's expected, not an error, since
+    this flow requires a manual tap before a post is really live.
+    """
+    access_token = _get_fresh_access_token()
+    video_id = _resolve_video_id(access_token, publish_id)
+
+    if video_id is None:
+        return {"status": "not_published"}
+
+    headers = {
+        "Authorization": f"Bearer {access_token}",
+        "Content-Type": "application/json; charset=UTF-8",
+    }
+    params = {"fields": "id,view_count,like_count,comment_count,share_count"}
+    payload = {"filters": {"video_ids": [video_id]}}
+    response = requests.post(
+        VIDEO_QUERY_URL, params=params, json=payload, headers=headers, timeout=30
+    )
+    if response.status_code >= 400:
+        raise RuntimeError(f"TikTok video query failed ({response.status_code}): {response.text}")
+
+    videos = response.json().get("data", {}).get("videos", [])
+    if not videos:
+        return {"status": "not_published"}
+
+    video = videos[0]
+    return {
+        "status": "published",
+        "views": video.get("view_count", 0),
+        "likes": video.get("like_count", 0),
+        "comments": video.get("comment_count", 0),
+        "shares": video.get("share_count", 0),
+    }

@@ -1,0 +1,51 @@
+name: Fetch Post Metrics
+
+on:
+  schedule:
+    - cron: "0 14 * * *"  # once daily, 9am/10am ET depending on DST
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run metrics fetch
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          TIKTOK_REFRESH_TOKEN: ${{ secrets.TIKTOK_REFRESH_TOKEN }}
+        run: python scripts/fetch_metrics.py
+
+      - name: Commit updated metrics
+        if: always()
+        run: |
+          git config user.name "social-scheduler-bot"
+          git config user.email "actions@github.com"
+          git add metrics.json
+          git diff --cached --quiet || git commit -m "Update post metrics [skip ci]"
+          git push
+
+      - name: Notify on failure
+        if: failure()
+        run: |
+          curl -H "Title: TCWA Social Poster — metrics fetch failed" \
+               -d "One or more metric fetches failed this run. Check the log, or view: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+               "ntfy.sh/${{ secrets.NTFY_TOPIC }}"
