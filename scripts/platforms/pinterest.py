@@ -1,10 +1,17 @@
 """
 Posts a Pin (image or video) to Pinterest using the Pinterest API v5.
-Wired up and ready to go — just needs your trial access approved and
-the environment variables below filled in.
+Live and confirmed working as of September 2026.
 
 Required environment variables:
-  PINTEREST_ACCESS_TOKEN
+  PINTEREST_CLIENT_ID
+  PINTEREST_CLIENT_SECRET
+  PINTEREST_REFRESH_TOKEN   - long-lived (60 days from issue, refreshable
+                                indefinitely), used to fetch a fresh access
+                                token on every run rather than storing a
+                                short-lived (30-day) access token directly.
+                                This mirrors tiktok.py's approach — the
+                                same fix for the Instagram token-expiry
+                                issue this campaign already hit once.
   PINTEREST_BOARD_ID
 
 Notes:
@@ -14,14 +21,9 @@ Notes:
     processing it, THEN create the pin referencing that media_id. This
     mirrors Instagram's container-then-publish pattern but with an extra
     "register the upload" step first.
-  - IMPORTANT: this module hasn't been run against a live, approved
-    Pinterest account yet (trial access was still pending as of this
-    write-up). Once access comes through, do a supervised test post
-    before trusting it in the scheduled run — Pinterest's API details
-    can shift, so re-check https://developers.pinterest.com/docs/api/v5/
-    if anything here doesn't match what you see.
 """
 
+import base64
 import os
 import time
 import requests
@@ -29,9 +31,31 @@ import requests
 from .media_utils import detect_media_type
 
 API_BASE = "https://api.pinterest.com/v5"
+TOKEN_URL = f"{API_BASE}/oauth/token"
 
 VIDEO_PROCESSING_TIMEOUT_SECONDS = 300
 VIDEO_POLL_INTERVAL_SECONDS = 5
+
+
+def _get_fresh_access_token() -> str:
+    client_id = os.environ["PINTEREST_CLIENT_ID"]
+    client_secret = os.environ["PINTEREST_CLIENT_SECRET"]
+    refresh_token = os.environ["PINTEREST_REFRESH_TOKEN"]
+
+    basic_auth = base64.b64encode(f"{client_id}:{client_secret}".encode()).decode()
+    headers = {
+        "Accept": "application/json",
+        "Authorization": f"Basic {basic_auth}",
+        "Content-Type": "application/x-www-form-urlencoded",
+    }
+    payload = {
+        "grant_type": "refresh_token",
+        "refresh_token": refresh_token,
+    }
+    response = requests.post(TOKEN_URL, headers=headers, data=payload, timeout=30)
+    if response.status_code >= 400:
+        raise RuntimeError(f"Pinterest token refresh failed ({response.status_code}): {response.text}")
+    return response.json()["access_token"]
 
 
 def _headers(access_token: str) -> dict:
@@ -55,7 +79,6 @@ def _create_pin(access_token: str, board_id: str, caption: str, media_source: di
 
 
 def _upload_video_and_get_media_id(access_token: str, media_url: str) -> str:
-    # Step 1: register the upload, get a media_id plus an upload URL/fields
     register_url = f"{API_BASE}/media"
     register_resp = requests.post(
         register_url,
@@ -70,8 +93,6 @@ def _upload_video_and_get_media_id(access_token: str, media_url: str) -> str:
     upload_url = register_data["upload_url"]
     upload_params = register_data.get("upload_parameters", {})
 
-    # Step 2: download our own video, then upload it as multipart form
-    # data to the URL Pinterest just gave us.
     video_resp = requests.get(media_url, timeout=60)
     if video_resp.status_code >= 400:
         raise RuntimeError(f"Could not download video from media_url ({video_resp.status_code})")
@@ -81,7 +102,6 @@ def _upload_video_and_get_media_id(access_token: str, media_url: str) -> str:
     if upload_resp.status_code >= 400:
         raise RuntimeError(f"Pinterest video upload failed ({upload_resp.status_code}): {upload_resp.text}")
 
-    # Step 3: poll until Pinterest finishes processing the video
     status_url = f"{API_BASE}/media/{media_id}"
     elapsed = 0
     while elapsed < VIDEO_PROCESSING_TIMEOUT_SECONDS:
@@ -106,7 +126,7 @@ def post(caption: str, media_url: str = "", media_type: str = "") -> dict:
     if not media_url:
         raise ValueError("Pinterest pins require a media_url (image or video) — Pinterest has no text-only pin")
 
-    access_token = os.environ["PINTEREST_ACCESS_TOKEN"]
+    access_token = _get_fresh_access_token()
     board_id = os.environ["PINTEREST_BOARD_ID"]
 
     resolved_type = media_type or detect_media_type(media_url)
@@ -122,3 +142,38 @@ def post(caption: str, media_url: str = "", media_type: str = "") -> dict:
             "Pass media_type='image' or media_type='video' explicitly, "
             "or use a URL with a recognized file extension."
         )
+
+
+def get_insights(pin_id: str) -> dict:
+    """Fetches engagement metrics for a published Pin using Pinterest's
+    analytics endpoint.
+
+    Pinterest's per-pin analytics need a date range rather than returning
+    a simple running total, so this requests the last 90 days up to today
+    and sums across that window — wide enough to cover this campaign's
+    full posting history without needing per-post logic for how long ago
+    each pin went up.
+    """
+    from datetime import datetime, timedelta, timezone
+
+    access_token = _get_fresh_access_token()
+    end_date = datetime.now(timezone.utc).date()
+    start_date = end_date - timedelta(days=90)
+
+    url = f"{API_BASE}/pins/{pin_id}/analytics"
+    params = {
+        "start_date": start_date.isoformat(),
+        "end_date": end_date.isoformat(),
+        "metric_types": "IMPRESSION,PIN_CLICK,OUTBOUND_CLICK,SAVE",
+    }
+    response = requests.get(url, params=params, headers=_headers(access_token), timeout=30)
+    if response.status_code >= 400:
+        raise RuntimeError(f"Pinterest insights fetch failed ({response.status_code}): {response.text}")
+
+    data = response.json().get("all", {}).get("summary_metrics", {})
+    return {
+        "impressions": data.get("IMPRESSION", 0),
+        "pin_clicks": data.get("PIN_CLICK", 0),
+        "outbound_clicks": data.get("OUTBOUND_CLICK", 0),
+        "saves": data.get("SAVE", 0),
+    }

@@ -18,19 +18,18 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-from platforms import facebook, instagram, tiktok
+from platforms import facebook, instagram, pinterest, tiktok
 
 SCHEDULE_PATH = Path(__file__).parent.parent / "schedule.json"
 METRICS_PATH = Path(__file__).parent.parent / "metrics.json"
 
 MIN_AGE_HOURS = 24
 
-# Pinterest omitted until it's live — add pinterest.get_insights here once
-# the trial API access comes through and pinterest.py has one.
 INSIGHTS_HANDLERS = {
     "facebook": lambda entry: facebook.get_insights(entry["result_id"]),
     "instagram": lambda entry: instagram.get_insights(entry["result_id"], entry.get("media_type", "")),
     "tiktok": lambda entry: tiktok.get_insights(entry["result_id"]),
+    "pinterest": lambda entry: pinterest.get_insights(entry["result_id"]),
 }
 
 
