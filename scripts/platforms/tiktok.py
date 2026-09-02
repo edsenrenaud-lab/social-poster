@@ -169,7 +169,10 @@ def _resolve_video_id(access_token: str, publish_id: str) -> str | None:
     post_ids = data.get("publicaly_available_post_id") or []
 
     if status == "PUBLISH_COMPLETE" and post_ids:
-        return post_ids[0]
+        # TikTok returns this as a JSON number, but the video/query/ endpoint
+        # requires video_ids as strings — without str(), Python's json module
+        # round-trips it as an int and TikTok rejects the request.
+        return str(post_ids[0])
     return None
 
 

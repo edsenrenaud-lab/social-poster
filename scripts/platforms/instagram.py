@@ -38,9 +38,10 @@ GRAPH_API_BASE = f"https://graph.facebook.com/{GRAPH_API_VERSION}"
 VIDEO_PROCESSING_TIMEOUT_SECONDS = 300
 VIDEO_POLL_INTERVAL_SECONDS = 5
 
-# Reels report "plays" instead of "impressions", so the metric list
-# differs by media type — request the right set for each.
-IMAGE_METRICS = "impressions,reach,likes,comments,saved,shares"
+# Reels report "plays"; feed images/videos report "reach" instead.
+# Note: 'impressions' is deprecated across all media types as of recent
+# Graph API versions and always errors — deliberately excluded here.
+IMAGE_METRICS = "reach,likes,comments,saved,shares"
 REELS_METRICS = "plays,reach,likes,comments,saved,shares"
 
 
