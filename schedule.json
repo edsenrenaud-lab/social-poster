@@ -595,7 +595,8 @@
     "datetime": "2026-09-02T20:00:00Z",
     "caption": "\"Before trust... there was respect.\" \u2014 Too Close to Walk Away is live now. #TCWA #contemporaryromance #chicagoromance\n\nIf you've already read TCWA, a quick review means the world \u2014 30 seconds, huge impact",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/Day%2019.mp4",
-    "status": "pending"
+    "status": "failed",
+    "error": "Instagram container creation failed (400): {\"error\":{\"message\":\"Error validating access token: Session has expired on Tuesday, 01-Sep-26 22:00:00 PDT. The current time is Wednesday, 02-Sep-26 13:08:26 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":463,\"fbtrace_id\":\"Ae4V_XaxbcvqXAazZ0hPhQJ\"}}"
   },
   {
     "id": "tcwa-day32-instagram",
