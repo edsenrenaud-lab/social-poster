@@ -605,7 +605,9 @@
     "datetime": "2026-09-04T14:00:00Z",
     "caption": "set in a city that actually feels lived in #chicagoromance #contemporaryromance\n\nThe story doesn't end here \u2014 Book Two, coming soon. Follow for the announcement.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/Day%2030.mp4",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-09-04T17:20:58.307677+00:00",
+    "result_id": "18118292176898756"
   },
   {
     "id": "tcwa-day32-facebook-mirror",
@@ -613,7 +615,8 @@
     "datetime": "2026-09-04T15:00:00Z",
     "caption": "set in a city that actually feels lived in #chicagoromance #contemporaryromance\n\nThe story doesn't end here \u2014 Book Two, coming soon. Follow for the announcement.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/Day%2030.mp4",
-    "status": "pending"
+    "status": "failed",
+    "error": "Facebook video post failed (400): {\"error\":{\"message\":\"(#100) No permission to publish the video\",\"type\":\"OAuthException\",\"code\":100,\"fbtrace_id\":\"AwZY3VLoMVJbMyXM9NhLT9f\"}}"
   },
   {
     "id": "test-instagram-token-refresh",
