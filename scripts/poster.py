@@ -28,7 +28,18 @@ PLATFORM_HANDLERS = {
 # between attempts (seconds). Kept short since this all happens within one
 # GitHub Actions job run.
 MAX_ATTEMPTS = 3
-RETRY_DELAYS = [15, 45]  # wait 15s before attempt 2, 45s before attempt 3
+RETRY_DELAYS = [30, 120]  # wait 30s before attempt 2, 120s before attempt 3 —
+                          # widened from [15, 45] after a Facebook video-publish
+                          # error cleared on manual retry minutes later but
+                          # wasn't recoverable within the original short window
+
+# The scheduler workflow runs every 15 minutes, so a "failed" entry can also
+# be retried across separate runs, not just within a single run's short
+# in-process retries above. Capped so a genuinely broken entry (bad
+# credentials, invalid media, wrong platform) doesn't retry forever and spam
+# the failure-notification alert every 15 minutes — it still fails and
+# alerts, just a bounded number of times rather than indefinitely.
+MAX_SCHEDULED_RETRIES = 4  # roughly 1 hour of retries at the 15-min interval
 
 # Signatures of errors known to be transient (network hiccups, rate limits,
 # platform-side outages) rather than real problems (bad credentials, invalid
@@ -45,6 +56,10 @@ TRANSIENT_PATTERNS = [
     r"failed to process the video", # platform-side processing timeout
     r"Connection (aborted|reset|refused)",
     r"Read timed out",
+    r"No permission to publish the video",  # intermittent Facebook video-fetch
+                                             # glitch — sounds permanent but has
+                                             # been observed to clear on retry;
+                                             # confirmed 2026-09-04
 ]
 
 
@@ -64,10 +79,22 @@ def save_schedule(entries: list) -> None:
 
 
 def is_due(entry: dict, now: datetime) -> bool:
-    if entry.get("status") != "pending":
-        return False
     scheduled_time = datetime.fromisoformat(entry["datetime"].replace("Z", "+00:00"))
-    return scheduled_time <= now
+    if scheduled_time > now:
+        return False
+
+    status = entry.get("status")
+    if status == "pending":
+        return True
+
+    # A previously-failed entry gets picked back up on a later run only if
+    # its error looked transient (not a permanent problem like bad
+    # credentials or invalid media) and it hasn't already used up its
+    # cross-run retry budget.
+    if status == "failed" and entry.get("scheduled_retry_count", 0) < MAX_SCHEDULED_RETRIES:
+        return is_transient(entry.get("error", ""))
+
+    return False
 
 
 def post_with_retry(handler, entry: dict) -> dict:
@@ -123,9 +150,16 @@ def main() -> None:
             entry["result_id"] = result.get("id", "")
             print(f"[{entry['id']}] Success — {platform} post ID {entry['result_id']}")
         except Exception as e:
-            print(f"[{entry['id']}] FAILED after retries — {e}")
+            was_scheduled_retry = entry.get("status") == "failed"
+            retry_count = entry.get("scheduled_retry_count", 0)
+            if was_scheduled_retry:
+                retry_count += 1
+
+            print(f"[{entry['id']}] FAILED after retries "
+                  f"(cross-run attempt {retry_count}/{MAX_SCHEDULED_RETRIES}) — {e}")
             entry["status"] = "failed"
             entry["error"] = str(e)
+            entry["scheduled_retry_count"] = retry_count
             had_failure = True
         changed = True
 
