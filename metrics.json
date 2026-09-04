@@ -2730,5 +2730,667 @@
       "saved": 0,
       "shares": 0
     }
+  },
+  {
+    "entry_id": "tcwa-day1-tiktok",
+    "platform": "tiktok",
+    "result_id": "v_inbox_file~v2.7673533004425512973",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "status": "published",
+      "views": 89,
+      "likes": 1,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day1-instagram",
+    "platform": "instagram",
+    "result_id": "18230228497316304",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "reach": 10,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day1-facebook-mirror",
+    "platform": "facebook",
+    "result_id": "122109364460482826",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day2-tiktok",
+    "platform": "tiktok",
+    "result_id": "v_inbox_file~v2.7673895146580215821",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "status": "published",
+      "views": 96,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day2-instagram",
+    "platform": "instagram",
+    "result_id": "18363581026245700",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "reach": 64,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day2-facebook-mirror",
+    "platform": "facebook",
+    "result_id": "122109415508482826",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day4-instagram",
+    "platform": "instagram",
+    "result_id": "18121376704894075",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "reach": 5,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day4-facebook-mirror",
+    "platform": "facebook",
+    "result_id": "122109460958482826",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day5-tiktok",
+    "platform": "tiktok",
+    "result_id": "v_inbox_file~v2.7674624593021143053",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "status": "published",
+      "views": 83,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day5-instagram",
+    "platform": "instagram",
+    "result_id": "18130105936630691",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "reach": 21,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day5-facebook-mirror",
+    "platform": "facebook",
+    "result_id": "122109510908482826",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day8-tiktok",
+    "platform": "tiktok",
+    "result_id": "v_inbox_file~v2.7675372930491336717",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "status": "published",
+      "views": 25,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day8-instagram",
+    "platform": "instagram",
+    "result_id": "18106636619091198",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "reach": 11,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day8-facebook-mirror",
+    "platform": "facebook",
+    "result_id": "122109613442482826",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day10-tiktok",
+    "platform": "tiktok",
+    "result_id": "v_inbox_file~v2.7675744003354888206",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "status": "published",
+      "views": 64,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day10-instagram",
+    "platform": "instagram",
+    "result_id": "18115623377513750",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "reach": 9,
+      "likes": 1,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day10-facebook-mirror",
+    "platform": "facebook",
+    "result_id": "122109672368482826",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day11-tiktok",
+    "platform": "tiktok",
+    "result_id": "v_inbox_file~v2.7676115847546685454",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "status": "published",
+      "views": 129,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day11-facebook-mirror",
+    "platform": "facebook",
+    "result_id": "122109730412482826",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day13-tiktok",
+    "platform": "tiktok",
+    "result_id": "v_inbox_file~v2.7676499854331234317",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "status": "published",
+      "views": 65,
+      "likes": 1,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day13-facebook-mirror",
+    "platform": "facebook",
+    "result_id": "122109784316482826",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day14-tiktok",
+    "platform": "tiktok",
+    "result_id": "v_inbox_file~v2.7676851209021655054",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "status": "published",
+      "views": 27,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day14-facebook-mirror",
+    "platform": "facebook",
+    "result_id": "122109836984482826",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day16-tiktok",
+    "platform": "tiktok",
+    "result_id": "v_inbox_file~v2.7677222741506017294",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "status": "published",
+      "views": 35,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day16-facebook-mirror",
+    "platform": "facebook",
+    "result_id": "122109879602482826",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day17-facebook-mirror",
+    "platform": "facebook",
+    "result_id": "122109926030482826",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day19-tiktok",
+    "platform": "tiktok",
+    "result_id": "v_inbox_file~v2.7677976051514984461",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "status": "published",
+      "views": 77,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day19-facebook-mirror",
+    "platform": "facebook",
+    "result_id": "122109970700482826",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day20-instagram",
+    "platform": "instagram",
+    "result_id": "17889180513610471",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "reach": 5,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day20-facebook-mirror",
+    "platform": "facebook",
+    "result_id": "1716039976172859",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day7-tiktok",
+    "platform": "tiktok",
+    "result_id": "v_inbox_file~v2.7678561145841649695",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "status": "published",
+      "views": 53,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day7-facebook-mirror",
+    "platform": "facebook",
+    "result_id": "1238918405047159",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day22-tiktok",
+    "platform": "tiktok",
+    "result_id": "v_inbox_file~v2.7679195508283410446",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "status": "published",
+      "views": 99,
+      "likes": 1,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day22-instagram",
+    "platform": "instagram",
+    "result_id": "17955171297232714",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "reach": 87,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day22-facebook-mirror",
+    "platform": "facebook",
+    "result_id": "1690096622066045",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day7-instagram",
+    "platform": "instagram",
+    "result_id": "18485574454110921",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "reach": 15,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day23-instagram",
+    "platform": "instagram",
+    "result_id": "18142298857585448",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "reach": 16,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day23-facebook-mirror",
+    "platform": "facebook",
+    "result_id": "1069069652282907",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day11-instagram",
+    "platform": "instagram",
+    "result_id": "18095924285535436",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "reach": 6,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day25-instagram",
+    "platform": "instagram",
+    "result_id": "18140353822587101",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "reach": 62,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day25-facebook-mirror",
+    "platform": "facebook",
+    "result_id": "2614375025680008",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day13-instagram",
+    "platform": "instagram",
+    "result_id": "18076320683437238",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "reach": 12,
+      "likes": 1,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day26-tiktok",
+    "platform": "tiktok",
+    "result_id": "v_inbox_file~v2.7679809803451516941",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "status": "published",
+      "views": 39,
+      "likes": 1,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day26-instagram",
+    "platform": "instagram",
+    "result_id": "18113528770971200",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "reach": 18,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day26-facebook-mirror",
+    "platform": "facebook",
+    "result_id": "27338675835807567",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day14-instagram",
+    "platform": "instagram",
+    "result_id": "17899525137568960",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "reach": 12,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day28-tiktok",
+    "platform": "tiktok",
+    "result_id": "v_inbox_file~v2.7680180881654466573",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "status": "published",
+      "views": 32,
+      "likes": 1,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day28-instagram",
+    "platform": "instagram",
+    "result_id": "17906497038510560",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "reach": 71,
+      "likes": 4,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day28-facebook-mirror",
+    "platform": "facebook",
+    "result_id": "1048714487936854",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day16-instagram",
+    "platform": "instagram",
+    "result_id": "18613594900016092",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "reach": 4,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day29-tiktok",
+    "platform": "tiktok",
+    "result_id": "v_inbox_file~v2.7680552849742252046",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "status": "published",
+      "views": 5,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day29-instagram",
+    "platform": "instagram",
+    "result_id": "17990339781032375",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "reach": 3,
+      "likes": 0,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day29-facebook-mirror",
+    "platform": "facebook",
+    "result_id": "1711944296549532",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  },
+  {
+    "entry_id": "tcwa-day17-instagram",
+    "platform": "instagram",
+    "result_id": "18110427977017617",
+    "fetched_at": "2026-09-04T06:06:44.042809+00:00",
+    "metrics": {
+      "reach": 9,
+      "likes": 1,
+      "comments": 0,
+      "saved": 0,
+      "shares": 0
+    }
   }
 ]
