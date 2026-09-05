@@ -616,8 +616,8 @@
     "caption": "set in a city that actually feels lived in #chicagoromance #contemporaryromance\n\nThe story doesn't end here \u2014 Book Two, coming soon. Follow for the announcement.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/Day%2030.mp4",
     "status": "failed",
-    "error": "Facebook video post failed (400): {\"error\":{\"message\":\"(#100) No permission to publish the video\",\"type\":\"OAuthException\",\"code\":100,\"fbtrace_id\":\"AWbTpQnImgDCNTrnhN4xNM0\"}}",
-    "scheduled_retry_count": 3
+    "error": "Facebook video post failed (400): {\"error\":{\"message\":\"(#100) No permission to publish the video\",\"type\":\"OAuthException\",\"code\":100,\"fbtrace_id\":\"AlJ0iYY0YRUB2zC8krn4W-p\"}}",
+    "scheduled_retry_count": 4
   },
   {
     "id": "test-instagram-token-refresh",
