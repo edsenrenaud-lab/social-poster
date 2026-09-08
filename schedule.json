@@ -615,9 +615,7 @@
     "datetime": "2026-09-04T15:00:00Z",
     "caption": "set in a city that actually feels lived in #chicagoromance #contemporaryromance\n\nThe story doesn't end here \u2014 Book Two, coming soon. Follow for the announcement.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/Day%2032.mp4",
-    "status": "failed",
-    "error": "Facebook video post failed (400): {\"error\":{\"message\":\"(#100) No permission to publish the video\",\"type\":\"OAuthException\",\"code\":100,\"fbtrace_id\":\"AVGik5kIE231i_OsL6YxTnC\"}}",
-    "scheduled_retry_count": 4
+    "status": "pending"
   },
   {
     "id": "test-instagram-token-refresh",
@@ -635,7 +633,9 @@
     "datetime": "2026-09-07T13:00:00Z",
     "caption": "I write characters who refuse to compromise. Not because they're stubborn. Because compromise, for them, feels like losing. So what happens when two people like that fall for each other? #TCWA #slowburnromance #contemporaryromance",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/Day%2033.mp4",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-09-07T15:17:45.804200+00:00",
+    "result_id": "v_inbox_file~v2.7682812828402583566"
   },
   {
     "id": "tcwa-day33-instagram",
@@ -644,7 +644,9 @@
     "caption": "two people who never back down, one slow burn romance #TCWA #slowburnromance #contemporaryromance\n\nToo Close to Walk Away \u2014 available now. Link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/Day%2033.mp4",
     "media_type": "video",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-09-07T15:17:45.804200+00:00",
+    "result_id": "18105397610524281"
   },
   {
     "id": "tcwa-day33-facebook-mirror",
