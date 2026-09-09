@@ -44,8 +44,32 @@ jobs:
           git config user.name "social-scheduler-bot"
           git config user.email "actions@github.com"
           git add schedule.json
-          git diff --cached --quiet || git commit -m "Update post statuses [skip ci]"
-          git push
+          git diff --cached --quiet && exit 0
+
+          git commit -m "Update post statuses [skip ci]"
+
+          # The remote can move between this run's checkout and this push
+          # (another run finishing, or a manual push landing at the same
+          # moment). On rejection: save this run's actual schedule.json
+          # result, reset cleanly onto the latest remote commit, then
+          # reapply this run's result on top and push again. This avoids
+          # git merge/rebase conflict markers ever touching the JSON file.
+          for attempt in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push rejected (attempt $attempt/3) — reapplying this run's result onto the latest remote state..."
+            cp schedule.json /tmp/schedule_this_run.json
+            git fetch origin main
+            git reset --hard origin/main
+            cp /tmp/schedule_this_run.json schedule.json
+            git add schedule.json
+            git diff --cached --quiet && exit 0
+            git commit -m "Update post statuses [skip ci]"
+          done
+
+          echo "Push still failing after 3 attempts — giving up this run."
+          exit 1
 
       - name: Notify on failure
         if: failure()
