@@ -654,8 +654,6 @@
     "datetime": "2026-09-07T15:00:00Z",
     "caption": "two people who never back down, one slow burn romance #TCWA #slowburnromance #contemporaryromance\n\nToo Close to Walk Away \u2014 available now. Link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/Day%2033.mp4",
-    "status": "failed",
-    "error": "Facebook video post failed (400): {\"error\":{\"message\":\"(#100) No permission to publish the video\",\"type\":\"OAuthException\",\"code\":100,\"fbtrace_id\":\"A_lP0o6cbwgAKqtmL8U-qIJ\"}}",
-    "scheduled_retry_count": 4
+    "status": "pending"
   }
 ]
