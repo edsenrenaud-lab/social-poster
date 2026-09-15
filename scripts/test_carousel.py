@@ -23,7 +23,6 @@ from platforms import instagram, tiktok
 TEST_IMAGE_URLS = [
     "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/test1.jpg",
     "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/test2.jpg",
-    "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/test3.jpg"
 ]
 
 TEST_CAPTION = "Testing carousel posting — link in bio."
@@ -49,9 +48,5 @@ def test_tiktok():
 
 
 if __name__ == "__main__":
-    if "test1.jpg" in TEST_IMAGE_URLS[0]:
-        print("Edit TEST_IMAGE_URLS at the top of this file with your real raw GitHub URLs first, "
-              "then run this again.")
-    else:
-        test_instagram()
-        test_tiktok()
+    test_instagram()
+    test_tiktok()
