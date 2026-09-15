@@ -5,8 +5,10 @@ and photo posts — media type is auto-detected from media_url's file
 extension (see media_utils.py), or pass media_type explicitly to skip
 detection.
 
-Uses direct file upload rather than PULL_FROM_URL, since PULL_FROM_URL
-requires TikTok domain-ownership verification of the media host.
+Uses direct file upload rather than PULL_FROM_URL for video, since
+PULL_FROM_URL requires TikTok domain-ownership verification of the media
+host. Photo posts do use PULL_FROM_URL, same as Facebook/Instagram's
+image flow — see _post_photo below.
 
 This is intentionally NOT full silent auto-publish — that requires TikTok's
 app audit process. This draft-mode flow works today without an audit.
@@ -19,12 +21,18 @@ Required environment variables:
 
 Status:
   - Video path: tested and confirmed working live.
-  - Photo path: wired up against TikTok's photo Content Posting API but
-    NOT yet run against a live account. Do a supervised test post before
-    trusting it in the scheduled run, and re-check
+  - Photo path (post): wired up against TikTok's photo Content Posting API
+    but NOT yet run against a live account. Do a supervised test post
+    before trusting it in the scheduled run, and re-check
     https://developers.tiktok.com/doc/content-posting-api-reference-upload-photo/
     if anything here doesn't match — TikTok's photo API is newer and less
     stable than their video API.
+  - Photo carousel path (post_carousel): TikTok's photo endpoint is
+    natively multi-image — photo_images has always accepted a list, post()
+    just only ever put one url in it. post_carousel below is that same
+    endpoint with more than one url, so it inherits the exact same
+    untested status as the single-photo path. Also do a supervised test
+    post before trusting it in the scheduled run.
 
 Insights:
   Because posts land as drafts, the publish_id returned at post time only
@@ -43,6 +51,10 @@ VIDEO_UPLOAD_INIT_URL = "https://open.tiktokapis.com/v2/post/publish/inbox/video
 PHOTO_UPLOAD_INIT_URL = "https://open.tiktokapis.com/v2/post/publish/content/init/"
 STATUS_FETCH_URL = "https://open.tiktokapis.com/v2/post/publish/status/fetch/"
 VIDEO_QUERY_URL = "https://open.tiktokapis.com/v2/video/query/"
+
+# TikTok's own limit on how many images one photo post (carousel or not)
+# can contain.
+PHOTO_MAX_ITEMS = 35
 
 from .media_utils import detect_media_type
 
@@ -100,12 +112,11 @@ def _post_video(access_token: str, media_url: str) -> dict:
     return {"id": publish_id}
 
 
-def _post_photo(access_token: str, caption: str, media_url: str) -> dict:
-    # Photo drafts go through the general "content" init endpoint rather
-    # than the video-specific inbox endpoint, and reference the photo by
-    # a publicly reachable URL (PULL_FROM_URL) rather than a raw byte
-    # upload — TikTok's photo API expects the image(s) to already be
-    # hosted, same as the Facebook/Instagram image flow.
+def _post_photos(access_token: str, caption: str, photo_images: list) -> dict:
+    """Shared by both post()'s single-photo path and post_carousel() below
+    — TikTok's content-init endpoint takes a photo_images list either way,
+    so a single photo is just the len(photo_images) == 1 case of a
+    carousel."""
     init_headers = {
         "Authorization": f"Bearer {access_token}",
         "Content-Type": "application/json; charset=UTF-8",
@@ -118,7 +129,7 @@ def _post_photo(access_token: str, caption: str, media_url: str) -> dict:
         "source_info": {
             "source": "PULL_FROM_URL",
             "photo_cover_index": 0,
-            "photo_images": [media_url],
+            "photo_images": photo_images,
         },
         "post_mode": "MEDIA_UPLOAD",
         "media_type": "PHOTO",
@@ -129,6 +140,15 @@ def _post_photo(access_token: str, caption: str, media_url: str) -> dict:
 
     init_data = init_resp.json()["data"]
     return {"id": init_data.get("publish_id", "")}
+
+
+def _post_photo(access_token: str, caption: str, media_url: str) -> dict:
+    # Photo drafts go through the general "content" init endpoint rather
+    # than the video-specific inbox endpoint, and reference the photo by
+    # a publicly reachable URL (PULL_FROM_URL) rather than a raw byte
+    # upload — TikTok's photo API expects the image(s) to already be
+    # hosted, same as the Facebook/Instagram image flow.
+    return _post_photos(access_token, caption, [media_url])
 
 
 def post(caption: str, media_url: str = "", media_type: str = "") -> dict:
@@ -148,6 +168,22 @@ def post(caption: str, media_url: str = "", media_type: str = "") -> dict:
             "Pass media_type='image' or media_type='video' explicitly, "
             "or use a URL with a recognized file extension."
         )
+
+
+def post_carousel(caption: str, media_urls: list) -> dict:
+    """Posts a photo carousel draft — multiple images in one post, lands
+    in your TikTok inbox exactly like post()'s single-photo path.
+
+    NOTE: inherits the same untested status as _post_photo above — do a
+    supervised test post before trusting it in the scheduled run.
+    """
+    if not media_urls:
+        raise ValueError("TikTok carousel posts require at least one media_url in media_urls")
+    if len(media_urls) > PHOTO_MAX_ITEMS:
+        raise ValueError(f"TikTok photo posts support at most {PHOTO_MAX_ITEMS} images, got {len(media_urls)}")
+
+    access_token = _get_fresh_access_token()
+    return _post_photos(access_token, caption, media_urls)
 
 
 def _resolve_video_id(access_token: str, publish_id: str) -> str | None:

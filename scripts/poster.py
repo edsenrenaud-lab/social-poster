@@ -24,6 +24,20 @@ PLATFORM_HANDLERS = {
     "tiktok": tiktok.post,
 }
 
+# Carousel (multi-image) posting isn't built into every platform module yet.
+# A schedule entry opts into the carousel path simply by having a
+# "media_urls" list instead of a "media_url" string — see is_carousel_entry()
+# below. Only platforms with a real post_carousel() function in their module
+# can handle one; getattr(..., None) means a platform that doesn't have it
+# yet (or ever, like Facebook/Pinterest, which have no carousel handler
+# planned) resolves to None here instead of raising an ImportError at
+# startup. main() checks for that None and fails just that one entry with a
+# clear message rather than crashing the whole run.
+CAROUSEL_HANDLERS = {
+    "instagram": getattr(instagram, "post_carousel", None),
+    "tiktok": getattr(tiktok, "post_carousel", None),
+}
+
 # How many times to attempt a post before giving up, and how long to wait
 # between attempts (seconds). Kept short since this all happens within one
 # GitHub Actions job run.
@@ -67,6 +81,13 @@ def is_transient(error_message: str) -> bool:
     return any(re.search(pattern, error_message, re.IGNORECASE) for pattern in TRANSIENT_PATTERNS)
 
 
+def is_carousel_entry(entry: dict) -> bool:
+    """A carousel entry carries "media_urls" (a list of images) instead of
+    a single "media_url". Everything else about it — id, platform, datetime,
+    caption, retry/status bookkeeping — works the same as a normal entry."""
+    return bool(entry.get("media_urls"))
+
+
 def load_schedule() -> list:
     with open(SCHEDULE_PATH, "r") as f:
         return json.load(f)
@@ -99,10 +120,21 @@ def is_due(entry: dict, now: datetime) -> bool:
 
 def post_with_retry(handler, entry: dict) -> dict:
     """Attempts the post, retrying only on errors that look transient.
-    Raises the final exception if every attempt fails."""
+    Raises the final exception if every attempt fails.
+
+    Dispatches on is_carousel_entry(): a carousel entry's handler is called
+    as post_carousel(caption, media_urls); a normal entry's handler is
+    called as post(caption, media_url, media_type) exactly as before. Both
+    share the same retry/transient-error logic."""
     last_error = None
+    carousel = is_carousel_entry(entry)
     for attempt in range(1, MAX_ATTEMPTS + 1):
         try:
+            if carousel:
+                return handler(
+                    entry.get("caption", ""),
+                    entry.get("media_urls", []),
+                )
             return handler(
                 entry.get("caption", ""),
                 entry.get("media_url", ""),
@@ -132,18 +164,24 @@ def main() -> None:
             continue
 
         platform = entry.get("platform")
-        handler = PLATFORM_HANDLERS.get(platform)
+        carousel = is_carousel_entry(entry)
+        handler = (CAROUSEL_HANDLERS if carousel else PLATFORM_HANDLERS).get(platform)
 
         if handler is None:
-            print(f"[{entry['id']}] Unknown platform '{platform}' — skipping")
+            if carousel:
+                print(f"[{entry['id']}] Platform '{platform}' has no carousel support — skipping")
+                entry["error"] = f"Carousel posting not supported for platform: {platform}"
+            else:
+                print(f"[{entry['id']}] Unknown platform '{platform}' — skipping")
+                entry["error"] = f"Unknown platform: {platform}"
             entry["status"] = "failed"
-            entry["error"] = f"Unknown platform: {platform}"
             changed = True
             had_failure = True
             continue
 
         try:
-            print(f"[{entry['id']}] Posting to {platform}...")
+            kind = " (carousel)" if carousel else ""
+            print(f"[{entry['id']}] Posting to {platform}{kind}...")
             result = post_with_retry(handler, entry)
             entry["status"] = "posted"
             entry["posted_at"] = now.isoformat()

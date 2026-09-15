@@ -21,6 +21,13 @@ Videos need an extra wait: Instagram processes the video after the
 container is created, and publishing before it's ready will fail. This
 module polls the container's status_code until it's FINISHED (or fails)
 before attempting to publish.
+
+Carousel posts (post_carousel) are a three-step variant of the same idea:
+  1. Create one child container per item, each flagged is_carousel_item
+  2. Create a parent CAROUSEL container referencing all the child ids
+  3. Publish the parent container — same _publish() used for single posts
+Instagram requires 2-10 items per carousel; children can be images or
+video, mixed freely, same auto-detection as a single post.
 """
 
 import os
@@ -34,7 +41,8 @@ GRAPH_API_BASE = f"https://graph.facebook.com/{GRAPH_API_VERSION}"
 
 # How long to wait for Instagram to finish processing an uploaded video
 # before giving up. Reels processing is usually well under this on
-# typical launch-campaign clip lengths.
+# typical launch-campaign clip lengths. Also applies to any video used
+# as a carousel child.
 VIDEO_PROCESSING_TIMEOUT_SECONDS = 300
 VIDEO_POLL_INTERVAL_SECONDS = 5
 
@@ -43,6 +51,10 @@ VIDEO_POLL_INTERVAL_SECONDS = 5
 # Graph API versions and always errors — deliberately excluded here.
 IMAGE_METRICS = "reach,likes,comments,saved,shares"
 REELS_METRICS = "plays,reach,likes,comments,saved,shares"
+
+# Instagram's own limits on how many items a single carousel can contain.
+CAROUSEL_MIN_ITEMS = 2
+CAROUSEL_MAX_ITEMS = 10
 
 
 def _create_container(ig_user_id: str, access_token: str, caption: str, payload_extra: dict) -> str:
@@ -127,6 +139,68 @@ def post(caption: str, media_url: str = "", media_type: str = "") -> dict:
             "Pass media_type='image' or media_type='video' explicitly, "
             "or use a URL with a recognized file extension."
         )
+
+    return _publish(ig_user_id, access_token, creation_id)
+
+
+def _create_carousel_child(ig_user_id: str, access_token: str, media_url: str) -> str:
+    """Creates one child container for a carousel item. Children don't
+    carry their own caption — only the parent carousel container does,
+    same as how Instagram's own app treats multi-image posts."""
+    resolved_type = detect_media_type(media_url)
+
+    if resolved_type == "video":
+        creation_id = _create_container(
+            ig_user_id, access_token, "",
+            {"media_type": "VIDEO", "video_url": media_url, "is_carousel_item": "true"},
+        )
+        _wait_for_video_ready(creation_id, access_token)
+    elif resolved_type == "image":
+        creation_id = _create_container(
+            ig_user_id, access_token, "",
+            {"image_url": media_url, "is_carousel_item": "true"},
+        )
+    else:
+        raise ValueError(
+            f"Could not determine media type for carousel item '{media_url}'. "
+            "Use a URL with a recognized file extension."
+        )
+
+    return creation_id
+
+
+def post_carousel(caption: str, media_urls: list) -> dict:
+    """Posts a carousel — multiple images/video in one swipeable post.
+    Each item becomes its own child container first, then a parent
+    CAROUSEL container ties them together and gets published, same as a
+    single post's create-then-publish flow.
+
+    NOTE: this has not yet been run against a live account. Do a
+    supervised test post before trusting it in the scheduled run —
+    same caution as any newly-wired endpoint in this codebase.
+    """
+    if not media_urls:
+        raise ValueError("Instagram carousel posts require at least one media_url in media_urls")
+    if len(media_urls) < CAROUSEL_MIN_ITEMS:
+        raise ValueError(
+            f"Instagram carousels need at least {CAROUSEL_MIN_ITEMS} items — "
+            "use post() for a single image or video"
+        )
+    if len(media_urls) > CAROUSEL_MAX_ITEMS:
+        raise ValueError(f"Instagram carousels support at most {CAROUSEL_MAX_ITEMS} items, got {len(media_urls)}")
+
+    ig_user_id = os.environ["IG_USER_ID"]
+    access_token = os.environ["IG_ACCESS_TOKEN"]
+
+    child_ids = [_create_carousel_child(ig_user_id, access_token, url) for url in media_urls]
+
+    creation_id = _create_container(
+        ig_user_id, access_token, caption,
+        {"media_type": "CAROUSEL", "children": ",".join(child_ids)},
+    )
+    # Same short settle pause used for a plain image post above, before
+    # the parent carousel container is published.
+    time.sleep(5)
 
     return _publish(ig_user_id, access_token, creation_id)
 
