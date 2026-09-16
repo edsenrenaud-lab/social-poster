@@ -676,7 +676,9 @@
     "datetime": "2026-09-16T15:00:00Z",
     "caption": "Six weeks changes everything. Read TCWA now \u2014 link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day35.jpg",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-09-16T15:28:39.805136+00:00",
+    "result_id": "122111023736482826"
   },
   {
     "id": "tcwa-day36-facebook",
@@ -916,7 +918,9 @@
       "https://media.esrenaud.com/Media/tcwa/day35-carousel-6.png",
       "https://media.esrenaud.com/Media/tcwa/day35-carousel-7.png"
     ],
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-09-16T15:28:39.805136+00:00",
+    "result_id": "18109150174942278"
   },
   {
     "id": "tcwa-day35-tiktok-carousel",
@@ -932,7 +936,9 @@
       "https://media.esrenaud.com/Media/tcwa/day35-carousel-6.png",
       "https://media.esrenaud.com/Media/tcwa/day35-carousel-7.png"
     ],
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-09-16T15:28:39.805136+00:00",
+    "result_id": "p_inbox_url~v2.7686155515252115469"
   },
   {
     "id": "tcwa-day37-instagram-carousel",
