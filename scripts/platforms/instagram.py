@@ -46,11 +46,14 @@ GRAPH_API_BASE = f"https://graph.facebook.com/{GRAPH_API_VERSION}"
 VIDEO_PROCESSING_TIMEOUT_SECONDS = 300
 VIDEO_POLL_INTERVAL_SECONDS = 5
 
-# Reels report "plays"; feed images/videos report "reach" instead.
+# Reels report "views"; feed images/videos report "reach" instead.
 # Note: 'impressions' is deprecated across all media types as of recent
 # Graph API versions and always errors — deliberately excluded here.
+# Note: 'plays' was Reels' original metric name but Meta now rejects it —
+# confirmed 2026-09-16 (day33-instagram metrics fetch) — 'views' is the
+# current valid name for the same thing.
 IMAGE_METRICS = "reach,likes,comments,saved,shares"
-REELS_METRICS = "plays,reach,likes,comments,saved,shares"
+REELS_METRICS = "views,reach,likes,comments,saved,shares"
 
 # Instagram's own limits on how many items a single carousel can contain.
 CAROUSEL_MIN_ITEMS = 2
