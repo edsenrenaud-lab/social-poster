@@ -21,8 +21,9 @@ from platforms import instagram, tiktok
 # Paste your 2-3 real raw GitHub URLs here, in the order you want them to
 # appear in the carousel.
 TEST_IMAGE_URLS = [
-    "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/test1.jpg",
-    "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/test2.jpg",
+    "https://media.esrenaud.com/Media/tcwa/test1.jpg",
+    "https://media.esrenaud.com/Media/tcwa/test2.jpg",
+    "https://media.esrenaud.com/Media/tcwa/test3.jpg",
 ]
 
 TEST_CAPTION = "Testing carousel posting — link in bio."
