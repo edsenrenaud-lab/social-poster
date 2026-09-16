@@ -1,5 +1,5 @@
 {
-  "_note": "facebook_posts are ready once images are exported to the Media/tcwa/dayN.jpg paths below (relative repo paths, matching your existing schedule.json convention). carousel_posts use full media.esrenaud.com URLs (required since TikTok/Instagram pull carousel images from a live, verified URL rather than a relative repo path) and media_urls ARRAYS (not media_url) - confirmed working end-to-end on 2026-09-16 with poster.py's carousel routing. Still need: export the 12 carousels' 7 slides each from Canva and upload to Media/tcwa/ with the day{N}-carousel-{1-7}.jpg naming used here, matching what's already live at media.esrenaud.com. No video entries included since no video files exist yet.",
+  "_note": "facebook_posts use relative Media/tcwa/dayN.jpg paths (real files, .jpg). carousel_posts use full media.esrenaud.com URLs ending in .png (matching the real exported file format) and media_urls ARRAYS. Confirmed working end-to-end 2026-09-16. All 30 FB card files and all 12 carousels x 7 slides have been renamed/restructured into Media/tcwa/ per restructure_media.sh - matches these paths exactly once uploaded and pushed to GitHub.",
   "facebook_posts": [
     {
       "id": "tcwa-day34-facebook",
@@ -217,13 +217,13 @@
       "id": "tcwa-day35-instagram-carousel",
       "platform": "instagram",
       "media_urls": [
-        "https://media.esrenaud.com/Media/tcwa/day35-carousel-1.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day35-carousel-2.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day35-carousel-3.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day35-carousel-4.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day35-carousel-5.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day35-carousel-6.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day35-carousel-7.jpg"
+        "https://media.esrenaud.com/Media/tcwa/day35-carousel-1.png",
+        "https://media.esrenaud.com/Media/tcwa/day35-carousel-2.png",
+        "https://media.esrenaud.com/Media/tcwa/day35-carousel-3.png",
+        "https://media.esrenaud.com/Media/tcwa/day35-carousel-4.png",
+        "https://media.esrenaud.com/Media/tcwa/day35-carousel-5.png",
+        "https://media.esrenaud.com/Media/tcwa/day35-carousel-6.png",
+        "https://media.esrenaud.com/Media/tcwa/day35-carousel-7.png"
       ],
       "caption": "Signs Ava Should Have Said No \u2014 link in bio.",
       "scheduled_time": "2026-09-16T10:00:00-04:00"
@@ -232,13 +232,13 @@
       "id": "tcwa-day35-tiktok-carousel",
       "platform": "tiktok",
       "media_urls": [
-        "https://media.esrenaud.com/Media/tcwa/day35-carousel-1.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day35-carousel-2.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day35-carousel-3.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day35-carousel-4.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day35-carousel-5.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day35-carousel-6.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day35-carousel-7.jpg"
+        "https://media.esrenaud.com/Media/tcwa/day35-carousel-1.png",
+        "https://media.esrenaud.com/Media/tcwa/day35-carousel-2.png",
+        "https://media.esrenaud.com/Media/tcwa/day35-carousel-3.png",
+        "https://media.esrenaud.com/Media/tcwa/day35-carousel-4.png",
+        "https://media.esrenaud.com/Media/tcwa/day35-carousel-5.png",
+        "https://media.esrenaud.com/Media/tcwa/day35-carousel-6.png",
+        "https://media.esrenaud.com/Media/tcwa/day35-carousel-7.png"
       ],
       "caption": "Signs Ava Should Have Said No \u2014 link in bio.",
       "scheduled_time": "2026-09-16T09:00:00-04:00"
@@ -247,13 +247,13 @@
       "id": "tcwa-day37-instagram-carousel",
       "platform": "instagram",
       "media_urls": [
-        "https://media.esrenaud.com/Media/tcwa/day37-carousel-1.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day37-carousel-2.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day37-carousel-3.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day37-carousel-4.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day37-carousel-5.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day37-carousel-6.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day37-carousel-7.jpg"
+        "https://media.esrenaud.com/Media/tcwa/day37-carousel-1.png",
+        "https://media.esrenaud.com/Media/tcwa/day37-carousel-2.png",
+        "https://media.esrenaud.com/Media/tcwa/day37-carousel-3.png",
+        "https://media.esrenaud.com/Media/tcwa/day37-carousel-4.png",
+        "https://media.esrenaud.com/Media/tcwa/day37-carousel-5.png",
+        "https://media.esrenaud.com/Media/tcwa/day37-carousel-6.png",
+        "https://media.esrenaud.com/Media/tcwa/day37-carousel-7.png"
       ],
       "caption": "5 Rules Ava Broke Without Meaning To \u2014 link in bio.",
       "scheduled_time": "2026-09-18T10:00:00-04:00"
@@ -262,13 +262,13 @@
       "id": "tcwa-day37-tiktok-carousel",
       "platform": "tiktok",
       "media_urls": [
-        "https://media.esrenaud.com/Media/tcwa/day37-carousel-1.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day37-carousel-2.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day37-carousel-3.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day37-carousel-4.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day37-carousel-5.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day37-carousel-6.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day37-carousel-7.jpg"
+        "https://media.esrenaud.com/Media/tcwa/day37-carousel-1.png",
+        "https://media.esrenaud.com/Media/tcwa/day37-carousel-2.png",
+        "https://media.esrenaud.com/Media/tcwa/day37-carousel-3.png",
+        "https://media.esrenaud.com/Media/tcwa/day37-carousel-4.png",
+        "https://media.esrenaud.com/Media/tcwa/day37-carousel-5.png",
+        "https://media.esrenaud.com/Media/tcwa/day37-carousel-6.png",
+        "https://media.esrenaud.com/Media/tcwa/day37-carousel-7.png"
       ],
       "caption": "5 Rules Ava Broke Without Meaning To \u2014 link in bio.",
       "scheduled_time": "2026-09-18T09:00:00-04:00"
@@ -277,13 +277,13 @@
       "id": "tcwa-day39-instagram-carousel",
       "platform": "instagram",
       "media_urls": [
-        "https://media.esrenaud.com/Media/tcwa/day39-carousel-1.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day39-carousel-2.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day39-carousel-3.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day39-carousel-4.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day39-carousel-5.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day39-carousel-6.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day39-carousel-7.jpg"
+        "https://media.esrenaud.com/Media/tcwa/day39-carousel-1.png",
+        "https://media.esrenaud.com/Media/tcwa/day39-carousel-2.png",
+        "https://media.esrenaud.com/Media/tcwa/day39-carousel-3.png",
+        "https://media.esrenaud.com/Media/tcwa/day39-carousel-4.png",
+        "https://media.esrenaud.com/Media/tcwa/day39-carousel-5.png",
+        "https://media.esrenaud.com/Media/tcwa/day39-carousel-6.png",
+        "https://media.esrenaud.com/Media/tcwa/day39-carousel-7.png"
       ],
       "caption": "What Noah Notices \u2014 link in bio.",
       "scheduled_time": "2026-09-20T10:00:00-04:00"
@@ -292,13 +292,13 @@
       "id": "tcwa-day39-tiktok-carousel",
       "platform": "tiktok",
       "media_urls": [
-        "https://media.esrenaud.com/Media/tcwa/day39-carousel-1.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day39-carousel-2.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day39-carousel-3.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day39-carousel-4.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day39-carousel-5.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day39-carousel-6.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day39-carousel-7.jpg"
+        "https://media.esrenaud.com/Media/tcwa/day39-carousel-1.png",
+        "https://media.esrenaud.com/Media/tcwa/day39-carousel-2.png",
+        "https://media.esrenaud.com/Media/tcwa/day39-carousel-3.png",
+        "https://media.esrenaud.com/Media/tcwa/day39-carousel-4.png",
+        "https://media.esrenaud.com/Media/tcwa/day39-carousel-5.png",
+        "https://media.esrenaud.com/Media/tcwa/day39-carousel-6.png",
+        "https://media.esrenaud.com/Media/tcwa/day39-carousel-7.png"
       ],
       "caption": "What Noah Notices \u2014 link in bio.",
       "scheduled_time": "2026-09-20T09:00:00-04:00"
@@ -307,13 +307,13 @@
       "id": "tcwa-day42-instagram-carousel",
       "platform": "instagram",
       "media_urls": [
-        "https://media.esrenaud.com/Media/tcwa/day42-carousel-1.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day42-carousel-2.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day42-carousel-3.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day42-carousel-4.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day42-carousel-5.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day42-carousel-6.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day42-carousel-7.jpg"
+        "https://media.esrenaud.com/Media/tcwa/day42-carousel-1.png",
+        "https://media.esrenaud.com/Media/tcwa/day42-carousel-2.png",
+        "https://media.esrenaud.com/Media/tcwa/day42-carousel-3.png",
+        "https://media.esrenaud.com/Media/tcwa/day42-carousel-4.png",
+        "https://media.esrenaud.com/Media/tcwa/day42-carousel-5.png",
+        "https://media.esrenaud.com/Media/tcwa/day42-carousel-6.png",
+        "https://media.esrenaud.com/Media/tcwa/day42-carousel-7.png"
       ],
       "caption": "A Room Full of People \u2014 link in bio.",
       "scheduled_time": "2026-09-23T10:00:00-04:00"
@@ -322,13 +322,13 @@
       "id": "tcwa-day42-tiktok-carousel",
       "platform": "tiktok",
       "media_urls": [
-        "https://media.esrenaud.com/Media/tcwa/day42-carousel-1.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day42-carousel-2.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day42-carousel-3.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day42-carousel-4.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day42-carousel-5.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day42-carousel-6.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day42-carousel-7.jpg"
+        "https://media.esrenaud.com/Media/tcwa/day42-carousel-1.png",
+        "https://media.esrenaud.com/Media/tcwa/day42-carousel-2.png",
+        "https://media.esrenaud.com/Media/tcwa/day42-carousel-3.png",
+        "https://media.esrenaud.com/Media/tcwa/day42-carousel-4.png",
+        "https://media.esrenaud.com/Media/tcwa/day42-carousel-5.png",
+        "https://media.esrenaud.com/Media/tcwa/day42-carousel-6.png",
+        "https://media.esrenaud.com/Media/tcwa/day42-carousel-7.png"
       ],
       "caption": "A Room Full of People \u2014 link in bio.",
       "scheduled_time": "2026-09-23T09:00:00-04:00"
@@ -337,13 +337,13 @@
       "id": "tcwa-day44-instagram-carousel",
       "platform": "instagram",
       "media_urls": [
-        "https://media.esrenaud.com/Media/tcwa/day44-carousel-1.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day44-carousel-2.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day44-carousel-3.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day44-carousel-4.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day44-carousel-5.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day44-carousel-6.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day44-carousel-7.jpg"
+        "https://media.esrenaud.com/Media/tcwa/day44-carousel-1.png",
+        "https://media.esrenaud.com/Media/tcwa/day44-carousel-2.png",
+        "https://media.esrenaud.com/Media/tcwa/day44-carousel-3.png",
+        "https://media.esrenaud.com/Media/tcwa/day44-carousel-4.png",
+        "https://media.esrenaud.com/Media/tcwa/day44-carousel-5.png",
+        "https://media.esrenaud.com/Media/tcwa/day44-carousel-6.png",
+        "https://media.esrenaud.com/Media/tcwa/day44-carousel-7.png"
       ],
       "caption": "Meet the Containment Series \u2014 link in bio.",
       "scheduled_time": "2026-09-25T10:00:00-04:00"
@@ -352,13 +352,13 @@
       "id": "tcwa-day44-tiktok-carousel",
       "platform": "tiktok",
       "media_urls": [
-        "https://media.esrenaud.com/Media/tcwa/day44-carousel-1.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day44-carousel-2.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day44-carousel-3.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day44-carousel-4.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day44-carousel-5.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day44-carousel-6.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day44-carousel-7.jpg"
+        "https://media.esrenaud.com/Media/tcwa/day44-carousel-1.png",
+        "https://media.esrenaud.com/Media/tcwa/day44-carousel-2.png",
+        "https://media.esrenaud.com/Media/tcwa/day44-carousel-3.png",
+        "https://media.esrenaud.com/Media/tcwa/day44-carousel-4.png",
+        "https://media.esrenaud.com/Media/tcwa/day44-carousel-5.png",
+        "https://media.esrenaud.com/Media/tcwa/day44-carousel-6.png",
+        "https://media.esrenaud.com/Media/tcwa/day44-carousel-7.png"
       ],
       "caption": "Meet the Containment Series \u2014 link in bio.",
       "scheduled_time": "2026-09-25T09:00:00-04:00"
@@ -367,13 +367,13 @@
       "id": "tcwa-day46-instagram-carousel",
       "platform": "instagram",
       "media_urls": [
-        "https://media.esrenaud.com/Media/tcwa/day46-carousel-1.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day46-carousel-2.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day46-carousel-3.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day46-carousel-4.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day46-carousel-5.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day46-carousel-6.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day46-carousel-7.jpg"
+        "https://media.esrenaud.com/Media/tcwa/day46-carousel-1.png",
+        "https://media.esrenaud.com/Media/tcwa/day46-carousel-2.png",
+        "https://media.esrenaud.com/Media/tcwa/day46-carousel-3.png",
+        "https://media.esrenaud.com/Media/tcwa/day46-carousel-4.png",
+        "https://media.esrenaud.com/Media/tcwa/day46-carousel-5.png",
+        "https://media.esrenaud.com/Media/tcwa/day46-carousel-6.png",
+        "https://media.esrenaud.com/Media/tcwa/day46-carousel-7.png"
       ],
       "caption": "The Containment Sessions: Track by Track \u2014 link in bio.",
       "scheduled_time": "2026-09-27T10:00:00-04:00"
@@ -382,13 +382,13 @@
       "id": "tcwa-day46-tiktok-carousel",
       "platform": "tiktok",
       "media_urls": [
-        "https://media.esrenaud.com/Media/tcwa/day46-carousel-1.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day46-carousel-2.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day46-carousel-3.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day46-carousel-4.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day46-carousel-5.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day46-carousel-6.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day46-carousel-7.jpg"
+        "https://media.esrenaud.com/Media/tcwa/day46-carousel-1.png",
+        "https://media.esrenaud.com/Media/tcwa/day46-carousel-2.png",
+        "https://media.esrenaud.com/Media/tcwa/day46-carousel-3.png",
+        "https://media.esrenaud.com/Media/tcwa/day46-carousel-4.png",
+        "https://media.esrenaud.com/Media/tcwa/day46-carousel-5.png",
+        "https://media.esrenaud.com/Media/tcwa/day46-carousel-6.png",
+        "https://media.esrenaud.com/Media/tcwa/day46-carousel-7.png"
       ],
       "caption": "The Containment Sessions: Track by Track \u2014 link in bio.",
       "scheduled_time": "2026-09-27T09:00:00-04:00"
@@ -397,13 +397,13 @@
       "id": "tcwa-day51-instagram-carousel",
       "platform": "instagram",
       "media_urls": [
-        "https://media.esrenaud.com/Media/tcwa/day51-carousel-1.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day51-carousel-2.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day51-carousel-3.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day51-carousel-4.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day51-carousel-5.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day51-carousel-6.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day51-carousel-7.jpg"
+        "https://media.esrenaud.com/Media/tcwa/day51-carousel-1.png",
+        "https://media.esrenaud.com/Media/tcwa/day51-carousel-2.png",
+        "https://media.esrenaud.com/Media/tcwa/day51-carousel-3.png",
+        "https://media.esrenaud.com/Media/tcwa/day51-carousel-4.png",
+        "https://media.esrenaud.com/Media/tcwa/day51-carousel-5.png",
+        "https://media.esrenaud.com/Media/tcwa/day51-carousel-6.png",
+        "https://media.esrenaud.com/Media/tcwa/day51-carousel-7.png"
       ],
       "caption": "Noah's Rules (Yes, He Had Them Too) \u2014 link in bio.",
       "scheduled_time": "2026-10-02T10:00:00-04:00"
@@ -412,13 +412,13 @@
       "id": "tcwa-day51-tiktok-carousel",
       "platform": "tiktok",
       "media_urls": [
-        "https://media.esrenaud.com/Media/tcwa/day51-carousel-1.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day51-carousel-2.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day51-carousel-3.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day51-carousel-4.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day51-carousel-5.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day51-carousel-6.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day51-carousel-7.jpg"
+        "https://media.esrenaud.com/Media/tcwa/day51-carousel-1.png",
+        "https://media.esrenaud.com/Media/tcwa/day51-carousel-2.png",
+        "https://media.esrenaud.com/Media/tcwa/day51-carousel-3.png",
+        "https://media.esrenaud.com/Media/tcwa/day51-carousel-4.png",
+        "https://media.esrenaud.com/Media/tcwa/day51-carousel-5.png",
+        "https://media.esrenaud.com/Media/tcwa/day51-carousel-6.png",
+        "https://media.esrenaud.com/Media/tcwa/day51-carousel-7.png"
       ],
       "caption": "Noah's Rules (Yes, He Had Them Too) \u2014 link in bio.",
       "scheduled_time": "2026-10-02T09:00:00-04:00"
@@ -427,13 +427,13 @@
       "id": "tcwa-day53-instagram-carousel",
       "platform": "instagram",
       "media_urls": [
-        "https://media.esrenaud.com/Media/tcwa/day53-carousel-1.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day53-carousel-2.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day53-carousel-3.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day53-carousel-4.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day53-carousel-5.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day53-carousel-6.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day53-carousel-7.jpg"
+        "https://media.esrenaud.com/Media/tcwa/day53-carousel-1.png",
+        "https://media.esrenaud.com/Media/tcwa/day53-carousel-2.png",
+        "https://media.esrenaud.com/Media/tcwa/day53-carousel-3.png",
+        "https://media.esrenaud.com/Media/tcwa/day53-carousel-4.png",
+        "https://media.esrenaud.com/Media/tcwa/day53-carousel-5.png",
+        "https://media.esrenaud.com/Media/tcwa/day53-carousel-6.png",
+        "https://media.esrenaud.com/Media/tcwa/day53-carousel-7.png"
       ],
       "caption": "The Ending That Doesn't Shout \u2014 link in bio.",
       "scheduled_time": "2026-10-04T10:00:00-04:00"
@@ -442,13 +442,13 @@
       "id": "tcwa-day53-tiktok-carousel",
       "platform": "tiktok",
       "media_urls": [
-        "https://media.esrenaud.com/Media/tcwa/day53-carousel-1.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day53-carousel-2.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day53-carousel-3.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day53-carousel-4.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day53-carousel-5.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day53-carousel-6.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day53-carousel-7.jpg"
+        "https://media.esrenaud.com/Media/tcwa/day53-carousel-1.png",
+        "https://media.esrenaud.com/Media/tcwa/day53-carousel-2.png",
+        "https://media.esrenaud.com/Media/tcwa/day53-carousel-3.png",
+        "https://media.esrenaud.com/Media/tcwa/day53-carousel-4.png",
+        "https://media.esrenaud.com/Media/tcwa/day53-carousel-5.png",
+        "https://media.esrenaud.com/Media/tcwa/day53-carousel-6.png",
+        "https://media.esrenaud.com/Media/tcwa/day53-carousel-7.png"
       ],
       "caption": "The Ending That Doesn't Shout \u2014 link in bio.",
       "scheduled_time": "2026-10-04T09:00:00-04:00"
@@ -457,13 +457,13 @@
       "id": "tcwa-day56-instagram-carousel",
       "platform": "instagram",
       "media_urls": [
-        "https://media.esrenaud.com/Media/tcwa/day56-carousel-1.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day56-carousel-2.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day56-carousel-3.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day56-carousel-4.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day56-carousel-5.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day56-carousel-6.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day56-carousel-7.jpg"
+        "https://media.esrenaud.com/Media/tcwa/day56-carousel-1.png",
+        "https://media.esrenaud.com/Media/tcwa/day56-carousel-2.png",
+        "https://media.esrenaud.com/Media/tcwa/day56-carousel-3.png",
+        "https://media.esrenaud.com/Media/tcwa/day56-carousel-4.png",
+        "https://media.esrenaud.com/Media/tcwa/day56-carousel-5.png",
+        "https://media.esrenaud.com/Media/tcwa/day56-carousel-6.png",
+        "https://media.esrenaud.com/Media/tcwa/day56-carousel-7.png"
       ],
       "caption": "Not Your Typical Slow Burn \u2014 link in bio.",
       "scheduled_time": "2026-10-07T10:00:00-04:00"
@@ -472,13 +472,13 @@
       "id": "tcwa-day56-tiktok-carousel",
       "platform": "tiktok",
       "media_urls": [
-        "https://media.esrenaud.com/Media/tcwa/day56-carousel-1.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day56-carousel-2.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day56-carousel-3.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day56-carousel-4.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day56-carousel-5.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day56-carousel-6.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day56-carousel-7.jpg"
+        "https://media.esrenaud.com/Media/tcwa/day56-carousel-1.png",
+        "https://media.esrenaud.com/Media/tcwa/day56-carousel-2.png",
+        "https://media.esrenaud.com/Media/tcwa/day56-carousel-3.png",
+        "https://media.esrenaud.com/Media/tcwa/day56-carousel-4.png",
+        "https://media.esrenaud.com/Media/tcwa/day56-carousel-5.png",
+        "https://media.esrenaud.com/Media/tcwa/day56-carousel-6.png",
+        "https://media.esrenaud.com/Media/tcwa/day56-carousel-7.png"
       ],
       "caption": "Not Your Typical Slow Burn \u2014 link in bio.",
       "scheduled_time": "2026-10-07T09:00:00-04:00"
@@ -487,13 +487,13 @@
       "id": "tcwa-day58-instagram-carousel",
       "platform": "instagram",
       "media_urls": [
-        "https://media.esrenaud.com/Media/tcwa/day58-carousel-1.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day58-carousel-2.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day58-carousel-3.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day58-carousel-4.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day58-carousel-5.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day58-carousel-6.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day58-carousel-7.jpg"
+        "https://media.esrenaud.com/Media/tcwa/day58-carousel-1.png",
+        "https://media.esrenaud.com/Media/tcwa/day58-carousel-2.png",
+        "https://media.esrenaud.com/Media/tcwa/day58-carousel-3.png",
+        "https://media.esrenaud.com/Media/tcwa/day58-carousel-4.png",
+        "https://media.esrenaud.com/Media/tcwa/day58-carousel-5.png",
+        "https://media.esrenaud.com/Media/tcwa/day58-carousel-6.png",
+        "https://media.esrenaud.com/Media/tcwa/day58-carousel-7.png"
       ],
       "caption": "What Book Two Costs Ava \u2014 link in bio.",
       "scheduled_time": "2026-10-09T10:00:00-04:00"
@@ -502,13 +502,13 @@
       "id": "tcwa-day58-tiktok-carousel",
       "platform": "tiktok",
       "media_urls": [
-        "https://media.esrenaud.com/Media/tcwa/day58-carousel-1.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day58-carousel-2.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day58-carousel-3.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day58-carousel-4.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day58-carousel-5.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day58-carousel-6.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day58-carousel-7.jpg"
+        "https://media.esrenaud.com/Media/tcwa/day58-carousel-1.png",
+        "https://media.esrenaud.com/Media/tcwa/day58-carousel-2.png",
+        "https://media.esrenaud.com/Media/tcwa/day58-carousel-3.png",
+        "https://media.esrenaud.com/Media/tcwa/day58-carousel-4.png",
+        "https://media.esrenaud.com/Media/tcwa/day58-carousel-5.png",
+        "https://media.esrenaud.com/Media/tcwa/day58-carousel-6.png",
+        "https://media.esrenaud.com/Media/tcwa/day58-carousel-7.png"
       ],
       "caption": "What Book Two Costs Ava \u2014 link in bio.",
       "scheduled_time": "2026-10-09T09:00:00-04:00"
@@ -517,13 +517,13 @@
       "id": "tcwa-day60-instagram-carousel",
       "platform": "instagram",
       "media_urls": [
-        "https://media.esrenaud.com/Media/tcwa/day60-carousel-1.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day60-carousel-2.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day60-carousel-3.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day60-carousel-4.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day60-carousel-5.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day60-carousel-6.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day60-carousel-7.jpg"
+        "https://media.esrenaud.com/Media/tcwa/day60-carousel-1.png",
+        "https://media.esrenaud.com/Media/tcwa/day60-carousel-2.png",
+        "https://media.esrenaud.com/Media/tcwa/day60-carousel-3.png",
+        "https://media.esrenaud.com/Media/tcwa/day60-carousel-4.png",
+        "https://media.esrenaud.com/Media/tcwa/day60-carousel-5.png",
+        "https://media.esrenaud.com/Media/tcwa/day60-carousel-6.png",
+        "https://media.esrenaud.com/Media/tcwa/day60-carousel-7.png"
       ],
       "caption": "Why I Write Restraint, Not Spectacle \u2014 link in bio.",
       "scheduled_time": "2026-10-11T10:00:00-04:00"
@@ -532,13 +532,13 @@
       "id": "tcwa-day60-tiktok-carousel",
       "platform": "tiktok",
       "media_urls": [
-        "https://media.esrenaud.com/Media/tcwa/day60-carousel-1.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day60-carousel-2.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day60-carousel-3.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day60-carousel-4.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day60-carousel-5.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day60-carousel-6.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day60-carousel-7.jpg"
+        "https://media.esrenaud.com/Media/tcwa/day60-carousel-1.png",
+        "https://media.esrenaud.com/Media/tcwa/day60-carousel-2.png",
+        "https://media.esrenaud.com/Media/tcwa/day60-carousel-3.png",
+        "https://media.esrenaud.com/Media/tcwa/day60-carousel-4.png",
+        "https://media.esrenaud.com/Media/tcwa/day60-carousel-5.png",
+        "https://media.esrenaud.com/Media/tcwa/day60-carousel-6.png",
+        "https://media.esrenaud.com/Media/tcwa/day60-carousel-7.png"
       ],
       "caption": "Why I Write Restraint, Not Spectacle \u2014 link in bio.",
       "scheduled_time": "2026-10-11T09:00:00-04:00"
@@ -547,13 +547,13 @@
       "id": "tcwa-day62-instagram-carousel",
       "platform": "instagram",
       "media_urls": [
-        "https://media.esrenaud.com/Media/tcwa/day62-carousel-1.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day62-carousel-2.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day62-carousel-3.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day62-carousel-4.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day62-carousel-5.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day62-carousel-6.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day62-carousel-7.jpg"
+        "https://media.esrenaud.com/Media/tcwa/day62-carousel-1.png",
+        "https://media.esrenaud.com/Media/tcwa/day62-carousel-2.png",
+        "https://media.esrenaud.com/Media/tcwa/day62-carousel-3.png",
+        "https://media.esrenaud.com/Media/tcwa/day62-carousel-4.png",
+        "https://media.esrenaud.com/Media/tcwa/day62-carousel-5.png",
+        "https://media.esrenaud.com/Media/tcwa/day62-carousel-6.png",
+        "https://media.esrenaud.com/Media/tcwa/day62-carousel-7.png"
       ],
       "caption": "Everything Waiting for You \u2014 link in bio.",
       "scheduled_time": "2026-10-13T10:00:00-04:00"
@@ -562,13 +562,13 @@
       "id": "tcwa-day62-tiktok-carousel",
       "platform": "tiktok",
       "media_urls": [
-        "https://media.esrenaud.com/Media/tcwa/day62-carousel-1.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day62-carousel-2.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day62-carousel-3.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day62-carousel-4.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day62-carousel-5.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day62-carousel-6.jpg",
-        "https://media.esrenaud.com/Media/tcwa/day62-carousel-7.jpg"
+        "https://media.esrenaud.com/Media/tcwa/day62-carousel-1.png",
+        "https://media.esrenaud.com/Media/tcwa/day62-carousel-2.png",
+        "https://media.esrenaud.com/Media/tcwa/day62-carousel-3.png",
+        "https://media.esrenaud.com/Media/tcwa/day62-carousel-4.png",
+        "https://media.esrenaud.com/Media/tcwa/day62-carousel-5.png",
+        "https://media.esrenaud.com/Media/tcwa/day62-carousel-6.png",
+        "https://media.esrenaud.com/Media/tcwa/day62-carousel-7.png"
       ],
       "caption": "Everything Waiting for You \u2014 link in bio.",
       "scheduled_time": "2026-10-13T09:00:00-04:00"
