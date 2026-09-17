@@ -686,7 +686,9 @@
     "datetime": "2026-09-17T15:00:00Z",
     "caption": "Read Too Close to Walk Away, free in Kindle Unlimited.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day36.jpg",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-09-17T15:03:23.177455+00:00",
+    "result_id": "122111067236482826"
   },
   {
     "id": "tcwa-day37-facebook",
