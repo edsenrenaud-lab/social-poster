@@ -686,7 +686,9 @@
     "datetime": "2026-09-17T15:00:00Z",
     "caption": "Read Too Close to Walk Away, free in Kindle Unlimited.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day36.jpg",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-09-17T15:03:23.177455+00:00",
+    "result_id": "122111067236482826"
   },
   {
     "id": "tcwa-day37-facebook",
@@ -694,7 +696,9 @@
     "datetime": "2026-09-18T15:00:00Z",
     "caption": "Link in bio — read it tonight.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day37.jpg",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-09-18T17:26:27.854695+00:00",
+    "result_id": "122111114702482826"
   },
   {
     "id": "tcwa-day38-facebook",
@@ -954,7 +958,9 @@
       "https://media.esrenaud.com/Media/tcwa/day37-carousel-6.png",
       "https://media.esrenaud.com/Media/tcwa/day37-carousel-7.png"
     ],
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-09-18T17:26:27.854695+00:00",
+    "result_id": "18064211321784426"
   },
   {
     "id": "tcwa-day37-tiktok-carousel",
@@ -970,7 +976,9 @@
       "https://media.esrenaud.com/Media/tcwa/day37-carousel-6.png",
       "https://media.esrenaud.com/Media/tcwa/day37-carousel-7.png"
     ],
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-09-18T13:45:30.967430+00:00",
+    "result_id": "p_inbox_url~v2.7686870931629262862"
   },
   {
     "id": "tcwa-day39-instagram-carousel",
