@@ -972,7 +972,9 @@
       "https://media.esrenaud.com/Media/tcwa/day37-carousel-6.png",
       "https://media.esrenaud.com/Media/tcwa/day37-carousel-7.png"
     ],
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-09-18T13:45:30.967430+00:00",
+    "result_id": "p_inbox_url~v2.7686870931629262862"
   },
   {
     "id": "tcwa-day39-instagram-carousel",
