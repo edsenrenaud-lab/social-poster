@@ -1366,7 +1366,9 @@
     "datetime": "2026-09-19T12:00:00Z",
     "caption": "Read TCWA free in Kindle Unlimited \u2014 link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day38.mp4",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-09-19T13:09:00.268476+00:00",
+    "result_id": "v_inbox_file~v2.7687232369993107469"
   },
   {
     "id": "tcwa-day38-instagram",
@@ -1374,7 +1376,9 @@
     "datetime": "2026-09-19T12:30:00Z",
     "caption": "Read TCWA free in Kindle Unlimited \u2014 link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day38.mp4",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-09-19T13:09:00.268476+00:00",
+    "result_id": "18207764275364839"
   },
   {
     "id": "tcwa-day39-tiktok",
