@@ -996,7 +996,9 @@
       "https://media.esrenaud.com/Media/tcwa/day39-carousel-6.png",
       "https://media.esrenaud.com/Media/tcwa/day39-carousel-7.png"
     ],
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-09-20T14:48:12.459279+00:00",
+    "result_id": "18106132511186659"
   },
   {
     "id": "tcwa-day39-tiktok-carousel",
@@ -1012,7 +1014,9 @@
       "https://media.esrenaud.com/Media/tcwa/day39-carousel-6.png",
       "https://media.esrenaud.com/Media/tcwa/day39-carousel-7.png"
     ],
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-09-20T14:48:12.459279+00:00",
+    "result_id": "p_inbox_url~v2.7687629311813666830"
   },
   {
     "id": "tcwa-day42-instagram-carousel",
@@ -1388,7 +1392,9 @@
     "datetime": "2026-09-20T12:00:00Z",
     "caption": "Read Too Close to Walk Away \u2014 link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day39.mp4",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-09-20T14:48:12.459279+00:00",
+    "result_id": "v_inbox_file~v2.7687629313692731405"
   },
   {
     "id": "tcwa-day39-instagram",
@@ -1396,7 +1402,9 @@
     "datetime": "2026-09-20T12:30:00Z",
     "caption": "Read Too Close to Walk Away \u2014 link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day39.mp4",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-09-20T14:48:12.459279+00:00",
+    "result_id": "18130061896704727"
   },
   {
     "id": "tcwa-day40-tiktok",
