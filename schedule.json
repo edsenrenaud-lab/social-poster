@@ -716,7 +716,9 @@
     "datetime": "2026-09-20T15:00:00Z",
     "caption": "Read Too Close to Walk Away \u2014 link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day39.jpg",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-09-20T17:54:27.964833+00:00",
+    "result_id": "122111215640482826"
   },
   {
     "id": "tcwa-day40-facebook",
