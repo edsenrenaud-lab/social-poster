@@ -1436,7 +1436,9 @@
     "datetime": "2026-09-22T12:00:00Z",
     "caption": "Read TCWA tonight \u2014 link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day41.mp4",
-    "status": "pending"
+    "status": "failed",
+    "error": "TikTok video upload init failed (401): {\"data\":{},\"error\":{\"code\":\"scope_not_authorized\",\"message\":\"The user did not authorize the scope required for completing this request.\",\"log_id\":\"202609221340065965F73FF6E73E1D5FE7\"}}",
+    "scheduled_retry_count": 0
   },
   {
     "id": "tcwa-day41-instagram",
@@ -1444,7 +1446,9 @@
     "datetime": "2026-09-22T12:30:00Z",
     "caption": "Read TCWA tonight \u2014 link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day41.mp4",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-09-22T13:40:04.494671+00:00",
+    "result_id": "17880490491624989"
   },
   {
     "id": "tcwa-day42-tiktok",
