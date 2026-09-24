@@ -756,7 +756,9 @@
     "datetime": "2026-09-24T15:00:00Z",
     "caption": "Read Too Close to Walk Away FREE in Kindle Unlimited \u2014 link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day43.jpg",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-09-24T15:55:46.493849+00:00",
+    "result_id": "122111464268482826"
   },
   {
     "id": "tcwa-day44-facebook",
@@ -1484,7 +1486,9 @@
     "datetime": "2026-09-24T12:00:00Z",
     "caption": "Read Too Close to Walk Away FREE in Kindle Unlimited \u2014 link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day43.mp4",
-    "status": "pending"
+    "status": "failed",
+    "error": "TikTok video upload init failed (401): {\"data\":{},\"error\":{\"code\":\"scope_not_authorized\",\"message\":\"The user did not authorize the scope required for completing this request.\",\"log_id\":\"20260924155553BAF2B6EB58AE00248532\"}}",
+    "scheduled_retry_count": 0
   },
   {
     "id": "tcwa-day43-instagram",
@@ -1492,7 +1496,9 @@
     "datetime": "2026-09-24T12:30:00Z",
     "caption": "Read Too Close to Walk Away FREE in Kindle Unlimited \u2014 link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day43.mp4",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-09-24T15:55:46.493849+00:00",
+    "result_id": "18481327264107249"
   },
   {
     "id": "tcwa-day44-tiktok",
