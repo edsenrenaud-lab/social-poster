@@ -1506,7 +1506,9 @@
     "datetime": "2026-09-25T12:00:00Z",
     "caption": "Read Too Close to Walk Away \u2014 link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day44.mp4",
-    "status": "pending"
+    "status": "failed",
+    "error": "TikTok video upload init failed (401): {\"data\":{},\"error\":{\"code\":\"scope_not_authorized\",\"message\":\"The user did not authorize the scope required for completing this request.\",\"log_id\":\"202609251203314402CB7073C1651E6D7C\"}}",
+    "scheduled_retry_count": 0
   },
   {
     "id": "tcwa-day44-instagram",
