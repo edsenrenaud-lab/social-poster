@@ -786,7 +786,9 @@
     "datetime": "2026-09-27T15:00:00Z",
     "caption": "Listen to The Containment Sessions \u2014 link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day46.jpg",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-09-27T15:44:16.046513+00:00",
+    "result_id": "122111637350482826"
   },
   {
     "id": "tcwa-day47-facebook",
@@ -1118,7 +1120,9 @@
       "https://media.esrenaud.com/Media/tcwa/day46-carousel-6.png",
       "https://media.esrenaud.com/Media/tcwa/day46-carousel-7.png"
     ],
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-09-27T15:44:16.046513+00:00",
+    "result_id": "17959016733227281"
   },
   {
     "id": "tcwa-day46-tiktok-carousel",
@@ -1134,7 +1138,9 @@
       "https://media.esrenaud.com/Media/tcwa/day46-carousel-6.png",
       "https://media.esrenaud.com/Media/tcwa/day46-carousel-7.png"
     ],
-    "status": "pending"
+    "status": "failed",
+    "error": "TikTok photo upload init failed (401): {\"error\":{\"code\":\"scope_not_authorized\",\"message\":\"The user did not authorize the scope required for completing this request.\",\"log_id\":\"20260927154505DD9D3D5F6E476DCAAC27\"}}",
+    "scheduled_retry_count": 0
   },
   {
     "id": "tcwa-day51-instagram-carousel",
@@ -1554,7 +1560,9 @@
     "datetime": "2026-09-27T12:00:00Z",
     "caption": "Listen to The Containment Sessions \u2014 link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day46.mp4",
-    "status": "pending"
+    "status": "failed",
+    "error": "TikTok video upload init failed (401): {\"error\":{\"code\":\"scope_not_authorized\",\"message\":\"The user did not authorize the scope required for completing this request.\",\"log_id\":\"20260927154506828D8092DDD01DCA110E\"},\"data\":{}}",
+    "scheduled_retry_count": 0
   },
   {
     "id": "tcwa-day46-instagram",
@@ -1562,7 +1570,9 @@
     "datetime": "2026-09-27T12:30:00Z",
     "caption": "Listen to The Containment Sessions \u2014 link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day46.mp4",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-09-27T15:44:16.046513+00:00",
+    "result_id": "18058717610534946"
   },
   {
     "id": "tcwa-day47-tiktok",
