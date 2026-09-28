@@ -1580,7 +1580,9 @@
     "datetime": "2026-09-28T12:00:00Z",
     "caption": "See what readers are saying \u2014 read TCWA. Link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day47.mp4",
-    "status": "pending"
+    "status": "failed",
+    "error": "TikTok video upload init failed (401): {\"data\":{},\"error\":{\"code\":\"scope_not_authorized\",\"message\":\"The user did not authorize the scope required for completing this request.\",\"log_id\":\"20260928145402E6B30C662F1C111C5D51\"}}",
+    "scheduled_retry_count": 0
   },
   {
     "id": "tcwa-day47-instagram",
@@ -1588,7 +1590,9 @@
     "datetime": "2026-09-28T12:30:00Z",
     "caption": "See what readers are saying \u2014 read TCWA. Link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day47.mp4",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-09-28T14:54:00.681420+00:00",
+    "result_id": "18104766557189750"
   },
   {
     "id": "tcwa-day48-tiktok",
