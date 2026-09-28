@@ -796,7 +796,9 @@
     "datetime": "2026-09-28T15:00:00Z",
     "caption": "See what readers are saying \u2014 read TCWA. Link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day47.jpg",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-09-28T21:02:53.931632+00:00",
+    "result_id": "122111704634482826"
   },
   {
     "id": "tcwa-day48-facebook",
