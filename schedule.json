@@ -1602,7 +1602,9 @@
     "datetime": "2026-09-29T12:00:00Z",
     "caption": "Read Too Close to Walk Away \u2014 link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day48.mp4",
-    "status": "pending"
+    "status": "failed",
+    "error": "TikTok video upload init failed (401): {\"error\":{\"code\":\"scope_not_authorized\",\"message\":\"The user did not authorize the scope required for completing this request.\",\"log_id\":\"20260929132038BA2DC2AAD41F0B8736F9\"},\"data\":{}}",
+    "scheduled_retry_count": 0
   },
   {
     "id": "tcwa-day48-instagram",
@@ -1610,7 +1612,9 @@
     "datetime": "2026-09-29T12:30:00Z",
     "caption": "Read Too Close to Walk Away \u2014 link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day48.mp4",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-09-29T13:20:37.954482+00:00",
+    "result_id": "18108786086230494"
   },
   {
     "id": "tcwa-day49-tiktok",
