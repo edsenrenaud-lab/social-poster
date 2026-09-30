@@ -816,7 +816,9 @@
     "datetime": "2026-09-30T15:00:00Z",
     "caption": "Read the scene everyone's talking about \u2014 link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day49.jpg",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-09-30T19:37:55.661321+00:00",
+    "result_id": "122111810906482826"
   },
   {
     "id": "tcwa-day50-facebook",
