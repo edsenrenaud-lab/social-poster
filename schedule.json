@@ -836,7 +836,9 @@
     "datetime": "2026-10-02T15:00:00Z",
     "caption": "Read Too Close to Walk Away \u2014 link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day51.jpg",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-10-02T18:02:29.477289+00:00",
+    "result_id": "122111911610482826"
   },
   {
     "id": "tcwa-day52-facebook",
@@ -1164,7 +1166,9 @@
       "https://media.esrenaud.com/Media/tcwa/day51-carousel-6.png",
       "https://media.esrenaud.com/Media/tcwa/day51-carousel-7.png"
     ],
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-10-02T18:02:29.477289+00:00",
+    "result_id": "18132662843477642"
   },
   {
     "id": "tcwa-day51-tiktok-carousel",
@@ -1180,7 +1184,9 @@
       "https://media.esrenaud.com/Media/tcwa/day51-carousel-6.png",
       "https://media.esrenaud.com/Media/tcwa/day51-carousel-7.png"
     ],
-    "status": "pending"
+    "status": "failed",
+    "error": "TikTok photo upload init failed (401): {\"error\":{\"code\":\"scope_not_authorized\",\"message\":\"The user did not authorize the scope required for completing this request.\",\"log_id\":\"2026100218031750B7C999FF9749E899A6\"}}",
+    "scheduled_retry_count": 0
   },
   {
     "id": "tcwa-day53-instagram-carousel",
