@@ -856,7 +856,9 @@
     "datetime": "2026-10-04T15:00:00Z",
     "caption": "Finish the story \u2014 read TCWA and leave a review. Link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day53.jpg",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-10-04T17:47:03.773358+00:00",
+    "result_id": "122112016052482826"
   },
   {
     "id": "tcwa-day54-facebook",
@@ -1204,7 +1206,9 @@
       "https://media.esrenaud.com/Media/tcwa/day53-carousel-6.png",
       "https://media.esrenaud.com/Media/tcwa/day53-carousel-7.png"
     ],
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-10-04T17:47:03.773358+00:00",
+    "result_id": "18026626271911567"
   },
   {
     "id": "tcwa-day53-tiktok-carousel",
