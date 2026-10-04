@@ -1220,7 +1220,9 @@
       "https://media.esrenaud.com/Media/tcwa/day53-carousel-6.png",
       "https://media.esrenaud.com/Media/tcwa/day53-carousel-7.png"
     ],
-    "status": "pending"
+    "status": "failed",
+    "error": "TikTok photo upload init failed (401): {\"error\":{\"code\":\"scope_not_authorized\",\"message\":\"The user did not authorize the scope required for completing this request.\",\"log_id\":\"20261004132909CA21E5C3BB8A638A6290\"}}",
+    "scheduled_retry_count": 0
   },
   {
     "id": "tcwa-day56-instagram-carousel",
@@ -1716,7 +1718,9 @@
     "datetime": "2026-10-04T12:00:00Z",
     "caption": "Finish the story \u2014 read TCWA and leave a review. Link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day53.mp4",
-    "status": "pending"
+    "status": "failed",
+    "error": "TikTok video upload init failed (401): {\"data\":{},\"error\":{\"code\":\"scope_not_authorized\",\"message\":\"The user did not authorize the scope required for completing this request.\",\"log_id\":\"20261004132910BB53172CD430C665108F\"}}",
+    "scheduled_retry_count": 0
   },
   {
     "id": "tcwa-day53-instagram",
@@ -1724,6 +1728,8 @@
     "datetime": "2026-10-04T12:30:00Z",
     "caption": "Finish the story \u2014 read TCWA and leave a review. Link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day53.mp4",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-10-04T13:29:08.390817+00:00",
+    "result_id": "18096324161111422"
   }
 ]
