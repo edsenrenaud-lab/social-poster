@@ -886,7 +886,9 @@
     "datetime": "2026-10-07T15:00:00Z",
     "caption": "Catch up on Book One before Book Two arrives \u2014 link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day56.jpg",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-10-07T16:45:19.898528+00:00",
+    "result_id": "122112177218482826"
   },
   {
     "id": "tcwa-day57-facebook",
@@ -1246,7 +1248,9 @@
       "https://media.esrenaud.com/Media/tcwa/day56-carousel-6.png",
       "https://media.esrenaud.com/Media/tcwa/day56-carousel-7.png"
     ],
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-10-07T16:45:19.898528+00:00",
+    "result_id": "18015838304970547"
   },
   {
     "id": "tcwa-day56-tiktok-carousel",
@@ -1262,7 +1266,9 @@
       "https://media.esrenaud.com/Media/tcwa/day56-carousel-6.png",
       "https://media.esrenaud.com/Media/tcwa/day56-carousel-7.png"
     ],
-    "status": "pending"
+    "status": "failed",
+    "error": "TikTok photo upload init failed (401): {\"error\":{\"code\":\"scope_not_authorized\",\"message\":\"The user did not authorize the scope required for completing this request.\",\"log_id\":\"20261007164606DF7058ADA2C3DE982904\"}}",
+    "scheduled_retry_count": 0
   },
   {
     "id": "tcwa-day58-instagram-carousel",
