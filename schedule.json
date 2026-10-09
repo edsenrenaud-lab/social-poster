@@ -1302,7 +1302,9 @@
       "https://media.esrenaud.com/Media/tcwa/day58-carousel-6.png",
       "https://media.esrenaud.com/Media/tcwa/day58-carousel-7.png"
     ],
-    "status": "pending"
+    "status": "failed",
+    "error": "TikTok photo upload init failed (401): {\"error\":{\"code\":\"scope_not_authorized\",\"message\":\"The user did not authorize the scope required for completing this request.\",\"log_id\":\"20261009134902B67938E27978E70DA312\"}}",
+    "scheduled_retry_count": 0
   },
   {
     "id": "tcwa-day60-instagram-carousel",
