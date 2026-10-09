@@ -906,7 +906,9 @@
     "datetime": "2026-10-09T15:00:00Z",
     "caption": "Read Book One first \u2014 link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day58.jpg",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-10-09T19:13:24.245030+00:00",
+    "result_id": "122112285644482826"
   },
   {
     "id": "tcwa-day59-facebook",
@@ -1286,7 +1288,9 @@
       "https://media.esrenaud.com/Media/tcwa/day58-carousel-6.png",
       "https://media.esrenaud.com/Media/tcwa/day58-carousel-7.png"
     ],
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-10-09T19:13:24.245030+00:00",
+    "result_id": "18118919371813736"
   },
   {
     "id": "tcwa-day58-tiktok-carousel",
