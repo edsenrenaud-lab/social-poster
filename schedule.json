@@ -916,7 +916,9 @@
     "datetime": "2026-10-10T15:00:00Z",
     "caption": "Listen to The Containment Sessions \u2014 link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day59.jpg",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-10-10T15:21:50.659147+00:00",
+    "result_id": "122112329864482826"
   },
   {
     "id": "tcwa-day60-facebook",
