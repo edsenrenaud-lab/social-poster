@@ -1326,7 +1326,9 @@
       "https://media.esrenaud.com/Media/tcwa/day60-carousel-6.png",
       "https://media.esrenaud.com/Media/tcwa/day60-carousel-7.png"
     ],
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-10-11T14:35:44.089782+00:00",
+    "result_id": "18111068408147188"
   },
   {
     "id": "tcwa-day60-tiktok-carousel",
@@ -1342,7 +1344,9 @@
       "https://media.esrenaud.com/Media/tcwa/day60-carousel-6.png",
       "https://media.esrenaud.com/Media/tcwa/day60-carousel-7.png"
     ],
-    "status": "pending"
+    "status": "failed",
+    "error": "TikTok photo upload init failed (401): {\"error\":{\"code\":\"scope_not_authorized\",\"message\":\"The user did not authorize the scope required for completing this request.\",\"log_id\":\"20261011143627D9CC9C37BD331B9C709E\"}}",
+    "scheduled_retry_count": 0
   },
   {
     "id": "tcwa-day62-instagram-carousel",
