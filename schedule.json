@@ -946,7 +946,9 @@
     "datetime": "2026-10-13T15:00:00Z",
     "caption": "Start where it began \u2014 read Book One. Link in bio.",
     "media_url": "https://raw.githubusercontent.com/edsenrenaud-lab/social-poster/main/Media/tcwa/day62.jpg",
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-10-13T15:56:32.820179+00:00",
+    "result_id": "122112488156482826"
   },
   {
     "id": "tcwa-day63-facebook",
@@ -1366,7 +1368,9 @@
       "https://media.esrenaud.com/Media/tcwa/day62-carousel-6.png",
       "https://media.esrenaud.com/Media/tcwa/day62-carousel-7.png"
     ],
-    "status": "pending"
+    "status": "posted",
+    "posted_at": "2026-10-13T15:56:32.820179+00:00",
+    "result_id": "18354577978169437"
   },
   {
     "id": "tcwa-day62-tiktok-carousel",
@@ -1382,7 +1386,9 @@
       "https://media.esrenaud.com/Media/tcwa/day62-carousel-6.png",
       "https://media.esrenaud.com/Media/tcwa/day62-carousel-7.png"
     ],
-    "status": "pending"
+    "status": "failed",
+    "error": "TikTok photo upload init failed (401): {\"error\":{\"code\":\"scope_not_authorized\",\"message\":\"The user did not authorize the scope required for completing this request.\",\"log_id\":\"20261013155716907C70E5109BE98339EE\"}}",
+    "scheduled_retry_count": 0
   },
   {
     "id": "tcwa-day35-tiktok",
